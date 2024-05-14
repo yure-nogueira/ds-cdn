@@ -1,0 +1,46 @@
+:host {
+  cursor: pointer;
+}
+
+.tp-button-cluster__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 4px;
+  color: var(--tp-color-brand-4);
+}
+.tp-button-cluster__icon {
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+::slotted([slot=text-expand]) {
+  display: none;
+  margin-bottom: 4px !important;
+  color: var(--tp-color-brand-4);
+}
+
+::slotted([slot=text-collapse]) {
+  margin-top: 4px !important;
+  color: var(--tp-color-brand-4);
+}
+
+:host(.tp-button-cluster--collapsed) ::slotted([slot=text-expand]) {
+  display: block;
+}
+:host(.tp-button-cluster--collapsed) ::slotted([slot=text-collapse]) {
+  display: none;
+}
+:host(.tp-button-cluster--collapsed) .tp-button-cluster__icon {
+  transform: rotate(0deg);
+}
+
+:host(.tp-color) .tp-button-cluster__icon {
+  color: var(--tp-color-base);
+}
+:host(.tp-color) ::slotted([slot=text-expand]),
+:host(.tp-color) ::slotted([slot=text-collapse]) {
+  color: var(--tp-color-base);
+}

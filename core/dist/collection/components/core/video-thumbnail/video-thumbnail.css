@@ -1,0 +1,79 @@
+:host {
+  --tp-max-width: 856px;
+  --tp-max-height: 524px;
+  --tp-padding: 16px;
+  --tp-width-icon: 48px;
+  --tp-height-icon: 48px;
+}
+
+:host {
+  display: block;
+  max-width: var(--tp-max-width);
+  max-height: var(--tp-max-height);
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.tp-video-thumbnail__img {
+  width: 100%;
+  height: auto;
+}
+.tp-video-thumbnail__container-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tp-padding);
+  background: rgba(var(--tp-color-neutral-1-rgb), 50%);
+}
+.tp-video-thumbnail__icon {
+  color: var(--tp-color-neutral-10);
+  width: var(--tp-width-icon);
+  height: var(--tp-height-icon);
+}
+.tp-video-thumbnail__progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+:host.tp-video-thumbnail--lg {
+  --tp-max-width: 856px;
+  --tp-max-height: 524px;
+  --tp-padding: 16px;
+  --tp-width-icon: 48px;
+  --tp-height-icon: 48px;
+}
+:host.tp-video-thumbnail--md {
+  --tp-max-width: 182px;
+  --tp-max-height: 108px;
+  --tp-padding: 8px;
+  --tp-width-icon: 24px;
+  --tp-height-icon: 24px;
+}
+:host.tp-video-thumbnail--sm {
+  --tp-max-width: 112px;
+  --tp-max-height: 68px;
+  --tp-padding: 4px;
+  --tp-width-icon: 24px;
+  --tp-height-icon: 24px;
+}
+:host.tp-video-thumbnail--xs {
+  --tp-max-width: 88px;
+  --tp-max-height: 60px;
+  --tp-padding: 4px;
+  --tp-width-icon: 16px;
+  --tp-height-icon: 16px;
+}
+
+:host(.tp-color) .tp-video-thumbnail__progress {
+  --background: rgba(var(--ion-color-base-rgb), 0.4);
+  --progress-background: var(--ion-color-base);
+}

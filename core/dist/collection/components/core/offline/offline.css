@@ -1,0 +1,35 @@
+:host {
+  --tp-z-index: 1000;
+  --tp-background: var(--tp-color-neutral-1);
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: var(--tp-z-index);
+}
+:host .offline {
+  background: var(--tp-background);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+}
+:host .offline__content {
+  pointer-events: none;
+  width: 100%;
+  height: calc(100% - 50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+:host .offline__icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+  color: var(--tp-color-neutral-10);
+}
+:host .offline__title {
+  display: block;
+  margin-bottom: 8px;
+}

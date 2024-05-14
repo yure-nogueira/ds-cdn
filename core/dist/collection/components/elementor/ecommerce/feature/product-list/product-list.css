@@ -1,0 +1,12 @@
+.product-list__top {
+  margin-bottom: 48px;
+}
+.product-list__filter {
+  max-width: 320px;
+}
+.product-list__middle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+  gap: 20px 32px;
+  margin-bottom: 48px;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"themes.type.js","sourceRoot":"","sources":["../../../../../src/components/core/tp-themes/utils/themes.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpThemesType = {\r\n  color: `${TpColor}`;\r\n};\r\n"]}

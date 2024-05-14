@@ -1,0 +1,1 @@
+{"version":3,"file":"header.interface.js","sourceRoot":"","sources":["../../../../../src/components/core/header/utils/header.interface.ts"],"names":[],"mappings":"","sourcesContent":["export interface headerResizeEventDetail {\r\n  height: number;\r\n}\r\n"]}

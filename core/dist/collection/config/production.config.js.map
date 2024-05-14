@@ -1,0 +1,1 @@
+{"version":3,"file":"production.config.js","sourceRoot":"","sources":["../../src/config/production.config.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,MAAM,iBAAiB,GAAW;IACvC,gBAAgB,EAAE,UAAU;CAC7B,CAAC","sourcesContent":["import { Config } from './config.interface';\r\n\r\nexport const PRODUCTION_CONFIG: Config = {\r\n  ASSETS_BASE_PATH: './assets',\r\n};\r\n"]}

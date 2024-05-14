@@ -1,0 +1,102 @@
+:host {
+  display: block;
+  color: var(--tp-color-neutral-10);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+:host ::slotted(p) {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 24px;
+  margin: 0;
+}
+:host ::slotted(h1) {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+  padding: 0;
+  margin: 0;
+}
+:host ::slotted(h2) {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  padding-top: 40px;
+  margin: 0;
+}
+:host ::slotted(h3) {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  padding-top: 40px;
+  margin: 0;
+}
+:host ::slotted(h4) {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-top: 40px;
+  margin: 0;
+}
+:host ::slotted(h5) {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 32px;
+  padding-top: 40px;
+  margin: 0;
+}
+:host ::slotted(h6) {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-top: 40px;
+  margin: 0;
+}
+:host ::slotted(figure) {
+  margin: 16px auto 0 !important;
+}
+:host ::slotted(figure) img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+:host ::slotted(figure) figcaption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+  padding-top: 8px;
+  color: var(--tp-color-neutral-10);
+  text-align: center;
+}
+:host ::slotted(img) {
+  display: block;
+  margin: 24px auto 0;
+  border-radius: 8px !important;
+}
+:host ::slotted(a),
+:host ::slotted(a:hover),
+:host ::slotted(a:active),
+:host ::slotted(a:link),
+:host ::slotted(a:visited) {
+  text-decoration: none;
+  color: var(--tp-color-brand-4);
+}
+:host ::slotted(ul),
+:host ::slotted(ol) {
+  margin: 0;
+  padding-top: 24px;
+}
+:host ::slotted(blockquote) {
+  margin: 0;
+  padding: 24px 40px 0 40px;
+  font-style: italic;
+}
+@media (max-width: 575.98px) {
+  :host ::slotted(blockquote) {
+    padding: 24px 24px 0 24px;
+  }
+}

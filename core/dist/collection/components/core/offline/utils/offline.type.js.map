@@ -1,0 +1,1 @@
+{"version":3,"file":"offline.type.js","sourceRoot":"","sources":["../../../../../src/components/core/offline/utils/offline.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpOfflineType = {\r\n  color: `${TpColor}`;\r\n  offlineTitle: string;\r\n  offlineText: string;\r\n};\r\n"]}

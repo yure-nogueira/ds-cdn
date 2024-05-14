@@ -1,0 +1,6 @@
+:host {
+  padding: 16px;
+}
+:host ::slotted(ion-range) {
+  --height: 24px;
+}

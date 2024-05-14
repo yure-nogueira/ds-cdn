@@ -1,0 +1,27 @@
+:host {
+  cursor: pointer;
+  display: block;
+}
+
+.tp-add-card__container {
+  --border-radius: 8px;
+  --background: var(--tp-color-neutral-2);
+  display: flex;
+  align-items: center;
+  max-width: 366px;
+}
+.tp-add-card__icon {
+  color: var(--tp-color-neutral-10);
+  width: 24px;
+  height: 24px;
+}
+
+:host(.tp-color) .tp-add-card__container {
+  --background: var(--tp-color-base);
+}
+:host(.tp-color) .tp-add-card__icon {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-add-card__text {
+  color: var(--tp-color-contrast);
+}

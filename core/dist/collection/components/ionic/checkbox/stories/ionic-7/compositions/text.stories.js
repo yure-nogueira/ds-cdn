@@ -23,36 +23,24 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado checked do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         indeterminate: {
             control: 'boolean',
             description: 'Define a estilização do estado indeterminate do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         ['tp-type']: {
@@ -63,12 +51,8 @@ const meta = {
 **OBS**: Atributo referente ao componente **'ion-text'**.
 `,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -85,14 +69,10 @@ export const Label = {
       ?disabled="${args.disabled}"
     >
       <ion-text tp-type="${args['tp-type']}">
-        Lorem ipsum, dolor sit amet consectetur.
+        <p>Lorem ipsum, dolor sit amet consectetur.</p>
       </ion-text>
     </ion-checkbox>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-checkbox/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=text.stories.js.map

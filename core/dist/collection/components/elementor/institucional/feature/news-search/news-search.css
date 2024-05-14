@@ -1,0 +1,15 @@
+.tp-news-search__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 24px;
+}
+@media (max-width: 767.98px) {
+  .tp-news-search__container {
+    flex-direction: column;
+  }
+}
+.tp-news-search__term-search, .tp-news-search__category-filter {
+  flex: 1 1 auto;
+  width: 100%;
+}

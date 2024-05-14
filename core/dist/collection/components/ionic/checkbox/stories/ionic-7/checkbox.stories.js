@@ -20,36 +20,24 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado checked do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         indeterminate: {
             control: 'boolean',
             description: 'Define a estilização do estado indeterminate do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -67,9 +55,5 @@ export const Default = {
     ></ion-checkbox>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-checkbox/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=checkbox.stories.js.map

@@ -37,9 +37,7 @@ const meta = {
 
 **OBS**: A cor **'${TpColorOrange.Orange}'** está disponivel apenas no theme **Recursos**.`,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
+                defaultValue: { summary: 'undefined' },
                 type: {
                     summary: [
                         ...TP_COLORS,
@@ -54,12 +52,8 @@ const meta = {
             options: [...TP_SPACING['tp-spacingx']],
             description: `Define o padding horizontal do componente`,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_SPACING['tp-spacingx'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_SPACING['tp-spacingx'].join('|') },
             },
         },
         ['tp-spacingy']: {
@@ -67,12 +61,8 @@ const meta = {
             options: [...TP_SPACING['tp-spacingy']],
             description: `Define o padding vertical do componente`,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_SPACING['tp-spacingy'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_SPACING['tp-spacingy'].join('|') },
             },
         },
         ['tp-type']: {
@@ -83,12 +73,8 @@ const meta = {
 **OBS**: Atributo referente ao componente **'ion-label'**.
 `,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -313,10 +299,6 @@ export const Default = {
       </ion-accordion-group>
     `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-accordion/gi)).toBeTruthy();
-    }, */
 };
 Default.argTypes = {
     color: { table: { disable: true } },

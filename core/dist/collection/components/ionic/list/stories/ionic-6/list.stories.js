@@ -28,12 +28,8 @@ const meta = {
             options: [...TP_ION_LIST.lines],
             description: 'Define uma borda no bottom do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_LIST.lines.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_LIST.lines.join('|') },
             },
         },
     },
@@ -66,9 +62,5 @@ export const Default = {
     </ion-list>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-list/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=list.stories.js.map

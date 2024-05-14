@@ -1,0 +1,1 @@
+{"version":3,"file":"toggle.type.js","sourceRoot":"","sources":["../../../../../src/components/core/toggle/utils/toggle.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpToggleType = {\r\n  color: `${TpColor}`;\r\n  collapsed: boolean;\r\n  iconClick: boolean;\r\n};\r\n"]}

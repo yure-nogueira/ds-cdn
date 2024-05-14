@@ -1,0 +1,12 @@
+import { Components } from '@ionic/core';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { TpIonItem } from '../../../../../components/ionic/item/utils/item.type';
+import { TpIonLabel } from '../../../../../components/ionic/label/utils/label.type';
+import { TpIonAccordion } from '../../utils/accordion.type';
+declare const meta: Meta<Components.IonAccordionGroup & Components.IonAccordion & Components.IonItem & Components.IonLabel & Components.IonText & TpIonAccordion & TpIonItem & TpIonLabel>;
+export default meta;
+type Story = StoryObj<Components.IonAccordionGroup & Components.IonAccordion & Components.IonItem & Components.IonLabel & Components.IonText & TpIonAccordion & TpIonItem & TpIonLabel>;
+export declare const DefaultMarkup: Story;
+export declare const TypeMarkup: Story;
+export declare const SpacingMarkup: Story;
+export declare const ColorsMarkup: Story;

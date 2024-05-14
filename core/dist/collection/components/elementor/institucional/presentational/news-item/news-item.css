@@ -1,0 +1,101 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.tp-news-item__container {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  border: 1px solid var(--tp-color-neutral-2);
+  border-radius: 8px;
+  padding: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.2s ease-in;
+}
+.tp-news-item__container:hover {
+  background-color: var(--tp-color-neutral-2);
+}
+.tp-news-item__container:hover ::slotted([slot=image]) {
+  transform: scale(1.15);
+}
+@media (max-width: 1199.98px) {
+  .tp-news-item__container {
+    gap: 48px;
+    padding: 32px;
+  }
+}
+@media (max-width: 991.98px) {
+  .tp-news-item__container {
+    gap: 32px;
+    padding: 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .tp-news-item__container {
+    gap: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .tp-news-item__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+.tp-news-item__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 40%;
+}
+@media (max-width: 575.98px) {
+  .tp-news-item__left {
+    flex: 1;
+  }
+}
+.tp-news-item__image-container {
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.tp-news-item ::slotted([slot=image]) {
+  transition: transform 0.3s ease-in;
+}
+.tp-news-item__right {
+  display: flex;
+  flex-direction: column;
+  flex: 60%;
+}
+@media (max-width: 575.98px) {
+  .tp-news-item__right {
+    flex: 1;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+.tp-news-item ::slotted([slot=category]) {
+  --padding-start: 24px !important;
+  --padding-end: 24px !important;
+  --padding-top: 2px !important;
+  --padding-bottom: 2px !important;
+  margin-bottom: 32px;
+  padding-left: var(--padding-start);
+  padding-right: var(--padding-end);
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+.tp-news-item ::slotted([slot=title]) {
+  margin-bottom: 24px;
+}
+.tp-news-item ::slotted([slot=title]) h1 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 600;
+}
+@media (max-width: 767.98px) {
+  .tp-news-item ::slotted([slot=title]) h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

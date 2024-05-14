@@ -24,12 +24,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: false,
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: false },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -108,9 +104,5 @@ export const Default = {
       </tp-segment-container>
     `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-segment/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=segment.stories.js.map

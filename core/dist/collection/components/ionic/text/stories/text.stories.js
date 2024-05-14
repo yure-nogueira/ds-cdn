@@ -22,12 +22,8 @@ const meta = {
             options: [...TP_TYPE],
             description: 'Define a estilização do texto do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -42,9 +38,5 @@ export const Default = {
     </ion-text>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-text/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=text.stories.js.map

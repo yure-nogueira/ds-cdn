@@ -25,12 +25,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         ['tp-type']: {
@@ -41,12 +37,8 @@ const meta = {
 **OBS**: Atributo referente ao componente **'ion-text'**.
 `,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -56,28 +48,24 @@ export const Text = {
     render: (_a) => {
         var args = __rest(_a, []);
         return html `
-    <ion-radio-group class="story__ion-radio-group">
+    <ion-radio-group class="markup-radio-group">
       <ion-radio color="${args.color}" ?disabled="${args.disabled}" value="1">
         <ion-text tp-type="${args['tp-type']}">
-          Lorem ipsum, dolor sit amet consectetur.
+          <p>Lorem ipsum, dolor sit amet consectetur.</p>
         </ion-text>
       </ion-radio>
       <ion-radio color="${args.color}" ?disabled="${args.disabled}" value="2">
         <ion-text tp-type="${args['tp-type']}">
-          Lorem ipsum, dolor sit amet consectetur.
+          <p>Lorem ipsum, dolor sit amet consectetur.</p>
         </ion-text>
       </ion-radio>
       <ion-radio color="${args.color}" ?disabled="${args.disabled}" value="3">
         <ion-text tp-type="${args['tp-type']}">
-          Lorem ipsum, dolor sit amet consectetur.
+          <p>Lorem ipsum, dolor sit amet consectetur.</p>
         </ion-text>
       </ion-radio>
     </ion-radio-group>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-radio/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=text.stories.js.map

@@ -21,7 +21,6 @@ defineCustomElementFabButton();
 defineCustomElementIcon();
 const meta = {
     title: 'components/Ionic/Fab',
-    argTypes: {},
 };
 export default meta;
 export const Default = {
@@ -53,9 +52,5 @@ export const Default = {
     </ion-fab>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-fab/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=fab.stories.js.map

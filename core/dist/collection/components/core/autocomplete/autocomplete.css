@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/**
+ * --tp-input-element-height: Define o tamanho do elemento que recebe input. 
+ * --tp-dropdown-max-height: Define o tamanho máximo do dropdown.
+ */
+:host {
+  --tp-input-element-height: 42px;
+  --tp-dropdown-max-height: 164px;
+}
+
+:host {
+  display: block;
+  position: relative;
+}
+:host::slotted(tp-dropdown) {
+  --tp-top: var(--tp-input-element-height);
+  max-height: var(--tp-dropdown-max-height);
+  background: var(--tp-color-neutral-2);
+  cursor: pointer;
+  overflow: auto;
+  border: 1px solid transparent;
+}
+
+:host(.tp-autocomplete.tp-autocomplete--dropdown-hide) {
+  opacity: 1;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+:host(.tp-autocomplete.tp-autocomplete--dropdown-hide)::slotted(tp-dropdown) {
+  opacity: 0;
+  pointer-events: none;
+  animation-name: fadeOut;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+:host(.tp-autocomplete.tp-autocomplete--dropdown-show) {
+  opacity: 1;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+:host(.tp-autocomplete.tp-autocomplete--dropdown-show)::slotted(tp-input-container) {
+  --tp-border-radius: 8px 8px 0 0;
+}
+:host(.tp-autocomplete.tp-autocomplete--dropdown-show)::slotted(tp-dropdown) {
+  opacity: 1;
+  animation-name: showUp;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes showUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+:host(.tp-color) ::slotted(tp-dropdown) {
+  --tp-scroll-color-content: var(--tp-color-contrast);
+  --tp-scroll-color-track: var(--tp-color-base);
+  background-color: var(--tp-color-base);
+  border: 1px solid var(--tp-color-base);
+  border-top: initial;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"question.type.js","sourceRoot":"","sources":["../../../../../src/components/core/question/utils/question.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpQuestionType = {\r\n  color: `${TpColor}`;\r\n  collapsed: boolean;\r\n  texto: string;\r\n};\r\n"]}

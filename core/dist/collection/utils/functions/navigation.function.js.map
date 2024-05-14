@@ -1,0 +1,1 @@
+{"version":3,"file":"navigation.function.js","sourceRoot":"","sources":["../../../src/utils/functions/navigation.function.ts"],"names":[],"mappings":"AAAA,MAAM,UAAU,QAAQ,CAAC,KAAa;IACpC,QAAQ,CAAC,IAAI,GAAG,GAAG,QAAQ,CAAC,MAAM,IAAI,KAAK,EAAE,CAAC;AAChD,CAAC","sourcesContent":["export function navigate(route: string) {\r\n  location.href = `${location.origin}/${route}`;\r\n}\r\n"]}

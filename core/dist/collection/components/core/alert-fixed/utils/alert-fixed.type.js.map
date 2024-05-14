@@ -1,0 +1,1 @@
+{"version":3,"file":"alert-fixed.type.js","sourceRoot":"","sources":["../../../../../src/components/core/alert-fixed/utils/alert-fixed.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpAlertFixedType = {\r\n  color: `${TpColor}`;\r\n  icon: string;\r\n  text: string;\r\n};\r\n"]}

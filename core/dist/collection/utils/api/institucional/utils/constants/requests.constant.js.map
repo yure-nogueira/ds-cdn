@@ -1,0 +1,1 @@
+{"version":3,"file":"requests.constant.js","sourceRoot":"","sources":["../../../../../../src/utils/api/institucional/utils/constants/requests.constant.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,gBAAgB,GAAG;IAC9B,OAAO,EAAE,aAAa;CACvB,CAAC","sourcesContent":["export const API_NEWS_ACTIONS = {\r\n  getNews: 'tp_get_news',\r\n};\r\n"]}

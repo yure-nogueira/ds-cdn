@@ -1,0 +1,1 @@
+{"version":3,"file":"images-carousel.type.js","sourceRoot":"","sources":["../../../../../../src/components/elementor/core/images-carousel/utils/images-carousel.type.ts"],"names":[],"mappings":"","sourcesContent":["export interface CarouselImage {\r\n  name: string;\r\n  src: string;\r\n  alt: string;\r\n}\r\n"]}

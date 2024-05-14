@@ -28,12 +28,8 @@ const meta = {
             options: ['full'],
             description: 'Define se o componente terá um border bottom.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: ['full'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: ['full'].join('|') },
             },
         },
         ['tp-gap']: {
@@ -41,12 +37,8 @@ const meta = {
             options: [...TP_SPACING['tp-gap']],
             description: 'Define qual o espaçamento entre o icone e o texto do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_SPACING['tp-gap'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_SPACING['tp-gap'].join('|') },
             },
         },
         ['tp-spacingx']: {
@@ -54,12 +46,8 @@ const meta = {
             options: [...TP_SPACING['tp-spacingx']],
             description: 'Define qual o espaçamento das bordas horizontais para o conteudo do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_SPACING['tp-spacingx'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_SPACING['tp-spacingx'].join('|') },
             },
         },
         ['tp-spacingy']: {
@@ -67,36 +55,24 @@ const meta = {
             options: [...TP_SPACING['tp-spacingy']],
             description: 'Define qual o espaçamento das bordas verticais para o conteudo do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_SPACING['tp-spacingy'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_SPACING['tp-spacingy'].join('|') },
             },
         },
         button: {
             control: 'boolean',
             description: 'Define a estilização do estado button do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -167,10 +143,6 @@ export const Textarea = {
       </ion-list>
     `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-item/gi)).toBeTruthy();
-    }, */
 };
 Textarea.argTypes = {
     color: { table: { disable: true } },

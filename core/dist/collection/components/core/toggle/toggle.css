@@ -1,0 +1,57 @@
+:host {
+  --tp-background: var(--tp-color-neutral-2);
+  --tp-color: var(--tp-color-neutral-10);
+  --tp-padding: 24px;
+  --tp-border-radius: 0;
+  --tp-initial-max-height: 20px;
+}
+
+:host {
+  background: var(--tp-background);
+  color: var(--tp-color);
+  padding: var(--tp-padding);
+  border-radius: var(--tp-border-radius);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+:host .tp-toggle__content {
+  max-height: var(--tp-initial-max-height);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+:host .tp-toggle__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+:host .tp-toggle__icon {
+  align-self: center;
+  margin-top: 8px;
+  font-size: 24px;
+  color: var(--tp-color);
+  transition: 0.3s transform ease;
+}
+
+:host(.tp-toggle--collapsed) .tp-toggle__icon {
+  transform: rotate(180deg);
+}
+
+:host(.tp-toggle--icon-click) {
+  cursor: unset;
+}
+
+:host(.tp-toggle--icon-click) .tp-toggle__bottom {
+  cursor: pointer;
+}
+
+:host(.tp-color) {
+  --tp-color: var(--tp-color-contrast);
+  --tp-background: var(--tp-color-base);
+}

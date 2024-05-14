@@ -1,0 +1,116 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+.product-search__item-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+.product-search__image-container {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  margin-right: 16px;
+  overflow: hidden;
+}
+.product-search__image {
+  object-fit: cover;
+}
+.product-search__info {
+  flex: 1 1 auto;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 379.98px) {
+  .product-search__info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+.product-search__info-left {
+  display: flex;
+  flex-direction: column;
+}
+.product-search__description {
+  color: rgba(var(--tp-color-contrast-rgb, var(--tp-color-neutral-10-rgb)), 0.7);
+}
+@media (max-width: 575.98px) {
+  .product-search__description {
+    display: none;
+  }
+}
+.product-search__info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+@media (max-width: 379.98px) {
+  .product-search__info-right {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+.product-search__sale-price {
+  text-decoration: line-through;
+  color: rgba(var(--tp-color-contrast-rgb, var(--tp-color-neutral-10-rgb)), 0.7);
+}
+.product-search__loader-container {
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--tp-color-base, var(--tp-color-neutral-2));
+  width: 24px;
+  height: 24px;
+}
+.product-search__loader {
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 3px solid var(--tp-color-contrast, var(--tp-color-neutral-6));
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: product-search-spinner 1.2s linear infinite;
+}
+.product-search__search-page-link {
+  width: 100%;
+  text-align: center;
+}
+.product-search__lightbox {
+  position: absolute;
+  top: 24px;
+  right: 16px;
+  display: flex;
+  width: calc(100% - 96px);
+  max-width: 240px;
+  height: auto;
+  box-shadow: -4px 4px 8px 1px rgba(var(--tp-color-neutral-1-rgb), 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10000;
+  opacity: 0;
+  transition: 300ms opacity ease-in-out;
+}
+.product-search__lightbox--show {
+  opacity: 1;
+}
+
+:host(.product-search__searchbar-hover) .product-search__loader-container {
+  background: var(--tp-color-neutral-3);
+}
+
+@keyframes product-search-spinner {
+  100% {
+    transform: rotate(360deg);
+  }
+}

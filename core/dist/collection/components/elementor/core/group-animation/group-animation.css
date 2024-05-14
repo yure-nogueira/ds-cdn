@@ -1,0 +1,8 @@
+:host {
+  display: inline-block;
+  position: relative;
+}
+
+:host(.tp-animation) ::slotted(*) {
+  opacity: 0;
+}

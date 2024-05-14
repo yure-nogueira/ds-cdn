@@ -1,0 +1,51 @@
+:host {
+  display: block;
+  background: var(--tp-color-neutral-1);
+  color: var(--tp-color-neutral-10);
+}
+
+.tp-calendar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  background-color: transparent;
+}
+.tp-calendar__header-left {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 210px;
+}
+.tp-calendar__label {
+  flex: 1;
+}
+.tp-calendar__header-right {
+  display: flex;
+  align-items: center;
+}
+.tp-calendar__icon {
+  color: var(--tp-color-neutral-8);
+}
+.tp-calendar__content-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+.tp-calendar__week-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  margin: 0 auto;
+}
+.tp-calendar__container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 100%;
+}
+
+:host(.tp-color) ::slotted(tp-calendar-day) {
+  --tp-active-color: var(--tp-color-contrast);
+  --tp-active-background: var(--tp-color-base);
+}

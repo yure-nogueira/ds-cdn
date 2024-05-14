@@ -20,12 +20,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -42,9 +38,5 @@ export const Default = {
     ></ion-toggle>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-toggle/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=toggle.stories.js.map

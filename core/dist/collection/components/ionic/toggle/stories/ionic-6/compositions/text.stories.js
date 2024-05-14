@@ -23,12 +23,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         ['tp-type']: {
@@ -39,12 +35,8 @@ const meta = {
 **OBS**: Atributo referente ao componente **'ion-text'**.
 `,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -68,9 +60,5 @@ export const Text = {
     ></ion-item>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-toggle/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=text.stories.js.map

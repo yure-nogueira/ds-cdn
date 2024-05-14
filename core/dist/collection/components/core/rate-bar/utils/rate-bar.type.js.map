@@ -1,0 +1,1 @@
+{"version":3,"file":"rate-bar.type.js","sourceRoot":"","sources":["../../../../../src/components/core/rate-bar/utils/rate-bar.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpRatebarType = {\r\n  color: `${TpColor}`;\r\n};\r\n"]}

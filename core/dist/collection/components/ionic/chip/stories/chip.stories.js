@@ -26,36 +26,24 @@ const meta = {
             options: [...TP_ION_CHIP['tp-size']],
             description: 'Define o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_CHIP['tp-size'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_CHIP['tp-size'].join('|') },
             },
         },
         ['tp-active']: {
             control: 'boolean',
             description: 'Define a estilização do estado ativo do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -106,9 +94,5 @@ export const Default = {
     </ion-chip>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-text/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=chip.stories.js.map

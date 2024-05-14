@@ -1,0 +1,123 @@
+:host {
+  --tp-background: var(--tp-color-neutral-2);
+  display: flex;
+  align-items: center;
+  max-width: 366px;
+  border-radius: 8px;
+  justify-content: space-between;
+  border: 1px solid transparent;
+  background: var(--tp-background);
+}
+:host [slot=tooltip] {
+  padding: 12px 12px 12px 0;
+}
+
+.tp-check-card__title {
+  margin-right: 16px;
+}
+.tp-check-card__title-wrap {
+  display: flex;
+  margin-top: 4px;
+}
+.tp-check-card__base {
+  --background: transparent;
+  display: flex;
+  align-items: center;
+}
+.tp-check-card__base [slot=start] {
+  margin-inline-end: 0;
+}
+.tp-check-card__base:hover {
+  --background-hover: transparent;
+}
+.tp-check-card__container {
+  padding: 12px 0 12px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+.tp-check-card__input-container {
+  padding: 12px 0 12px 16px;
+}
+.tp-check-card__text-container {
+  padding: 0 18px;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.tp-check-card__info-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.tp-check-card__icon {
+  color: var(--tp-color-neutral-8);
+  width: 16px;
+  height: 16px;
+}
+.tp-check-card__container-fix {
+  display: flex;
+  align-items: center;
+}
+.tp-check-card__subtitulo {
+  color: var(--tp-color-neutral-8);
+  margin: 0 8px;
+}
+.tp-check-card__hora {
+  color: var(--tp-color-neutral-8);
+}
+.tp-check-card__data {
+  color: var(--tp-color-neutral-8);
+}
+.tp-check-card__data-hora {
+  margin-top: 8px;
+  color: var(--tp-color-neutral-8);
+}
+.tp-check-card__tooltip-container {
+  display: none;
+}
+.tp-check-card__tooltip-container ::slotted(tp-tooltip) ion-button {
+  color: var(--tp-color-warning);
+}
+
+:host(.tp-check-card--alert) {
+  border: 1px solid var(--tp-color-warning);
+}
+:host(.tp-check-card--alert) .tp-check-card__tooltip-container {
+  display: block;
+  padding: 12px 16px 12px 0;
+}
+
+:host(.tp-color) {
+  --tp-background: var(--tp-color-base);
+}
+:host(.tp-color) ::slotted(ion-checkbox) {
+  --border-color: var(--tp-color-contrast);
+  --border-color-checked: var(--tp-color-contrast);
+  --checkbox-background-checked: var(--tp-color-contrast);
+  --checkmark-color: var(--tp-color-base);
+}
+:host(.tp-color) ::slotted(ion-checkbox):hover {
+  --border-color-checked: var(--tp-color-contrast);
+  --checkbox-background-checked: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__title {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__icon {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__subtitulo {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__hora {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__data {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) .tp-check-card__data-hora {
+  color: var(--tp-color-contrast);
+}

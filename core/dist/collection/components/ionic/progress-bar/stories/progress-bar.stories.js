@@ -20,12 +20,8 @@ const meta = {
             control: { type: 'range', min: 0, max: 100, step: 1 },
             description: `Define a estilização do progresso do componente.`,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'number',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'number' },
             },
         },
     },
@@ -44,9 +40,5 @@ export const Default = {
     ></ion-progress-bar>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-text/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=progress-bar.stories.js.map

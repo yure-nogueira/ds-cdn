@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { defineCustomElement as defineCustomElementRadio } from "@ionic/core/components/ion-radio";
-import { defineCustomElement as defineCustomElementRadioGroup, } from "@ionic/core/components/ion-radio-group";
+import { defineCustomElement as defineCustomElementRadioGroup } from "@ionic/core/components/ion-radio-group";
 import { html } from "lit";
 defineCustomElementRadio();
 defineCustomElementRadioGroup();
@@ -22,12 +22,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -51,9 +47,5 @@ export const Default = {
     </ion-radio-group>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-radio/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=radio.stories.js.map

@@ -1,0 +1,10 @@
+import { Components } from '@ionic/core';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { TpIonChip } from '../../utils/chip.type';
+declare const meta: Meta<Components.IonChip & Components.IonLabel & Components.IonIcon & TpIonChip>;
+export default meta;
+type Story = StoryObj<Components.IonChip & Components.IonLabel & Components.IonIcon & TpIonChip>;
+export declare const DefaultMarkup: Story;
+export declare const SizeMarkup: Story;
+export declare const IconMarkup: Story;
+export declare const ColorsMarkup: Story;

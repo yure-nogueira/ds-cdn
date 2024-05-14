@@ -6,15 +6,47 @@
  */
 import { HTMLStencilElement, JSXBase } from "./stencil-public-runtime";
 import { TpColor } from "./utils/types/color.type";
-import { TpChartRadialSize } from "./components/templarios/chart-radial/utils/chart-radial.enum";
-import { TpChartRadialItem } from "./components/templarios/chart-radial/utils/chart-radial.type";
-import { TpHorizontalChartBarSize } from "./components/templarios/horizontal-chart-bar/utils/horizontal-chart-bar.enum";
-import { TpLoaderType } from "./components/templarios/loader/utils/loader.type";
+import { TpBannerAlignment } from "./components/elementor/core/banner/utils/banner.type";
+import { TpCalendarTimeframe } from "./components/core/calendar/utils/calendar.type";
+import { TpChartRadialSize } from "./components/core/chart-radial/utils/chart-radial.enum";
+import { TpChartRadialItem } from "./components/core/chart-radial/utils/chart-radial.type";
+import { TpDownloadButtonSizes } from "./components/core/download-button/utils/download-button.type";
+import { CartInfo } from "./utils/api/ecommerce/utils/interfaces/cart.interface";
+import { NewsListMode } from "./components/elementor/institucional/feature/news-list/utils/news-list.type";
+import { TpColor as TpColor1 } from "./components";
+import { ProductDetail } from "./components/elementor/ecommerce/presentational/product-detail/utils/product-detail.interface";
+import { AddToCartData } from "./components/elementor/ecommerce/feature/product-info/utils/product-info.interface";
+import { ProductItem } from "./components/elementor/ecommerce/presentational/product-item/utils/product-item.interface";
+import { TpFontZoomSize } from "./components/core/font-zoom/utils/font-zoom.enum";
+import { TpGroupAnimationType } from "./components/elementor/core/group-animation/utils/group-animation.type";
+import { headerResizeEventDetail } from "./components/core/header/utils/header.interface";
+import { TpHorizontalChartBarSize } from "./components/core/horizontal-chart-bar/utils/horizontal-chart-bar.enum";
+import { CarouselImage } from "./components/elementor/core/images-carousel/utils/images-carousel.type";
+import { TpPaginationDirection, TpPaginationSize } from "./components/core/pagination/utils/pagination.type";
+import { TpPlusMinusStatus } from "./components/core/plusminus/utils/plusminus.enum";
+import { TpTema } from "./components/core/tp-themes/utils/themes.interface";
+import { TpVideoThumbnailSize } from "./components/core/video-thumbnail/utils/video-thumbnail.enum";
 export { TpColor } from "./utils/types/color.type";
-export { TpChartRadialSize } from "./components/templarios/chart-radial/utils/chart-radial.enum";
-export { TpChartRadialItem } from "./components/templarios/chart-radial/utils/chart-radial.type";
-export { TpHorizontalChartBarSize } from "./components/templarios/horizontal-chart-bar/utils/horizontal-chart-bar.enum";
-export { TpLoaderType } from "./components/templarios/loader/utils/loader.type";
+export { TpBannerAlignment } from "./components/elementor/core/banner/utils/banner.type";
+export { TpCalendarTimeframe } from "./components/core/calendar/utils/calendar.type";
+export { TpChartRadialSize } from "./components/core/chart-radial/utils/chart-radial.enum";
+export { TpChartRadialItem } from "./components/core/chart-radial/utils/chart-radial.type";
+export { TpDownloadButtonSizes } from "./components/core/download-button/utils/download-button.type";
+export { CartInfo } from "./utils/api/ecommerce/utils/interfaces/cart.interface";
+export { NewsListMode } from "./components/elementor/institucional/feature/news-list/utils/news-list.type";
+export { TpColor as TpColor1 } from "./components";
+export { ProductDetail } from "./components/elementor/ecommerce/presentational/product-detail/utils/product-detail.interface";
+export { AddToCartData } from "./components/elementor/ecommerce/feature/product-info/utils/product-info.interface";
+export { ProductItem } from "./components/elementor/ecommerce/presentational/product-item/utils/product-item.interface";
+export { TpFontZoomSize } from "./components/core/font-zoom/utils/font-zoom.enum";
+export { TpGroupAnimationType } from "./components/elementor/core/group-animation/utils/group-animation.type";
+export { headerResizeEventDetail } from "./components/core/header/utils/header.interface";
+export { TpHorizontalChartBarSize } from "./components/core/horizontal-chart-bar/utils/horizontal-chart-bar.enum";
+export { CarouselImage } from "./components/elementor/core/images-carousel/utils/images-carousel.type";
+export { TpPaginationDirection, TpPaginationSize } from "./components/core/pagination/utils/pagination.type";
+export { TpPlusMinusStatus } from "./components/core/plusminus/utils/plusminus.enum";
+export { TpTema } from "./components/core/tp-themes/utils/themes.interface";
+export { TpVideoThumbnailSize } from "./components/core/video-thumbnail/utils/video-thumbnail.enum";
 export namespace Components {
     interface DialogExample {
     }
@@ -22,50 +54,199 @@ export namespace Components {
     }
     interface SheetExample {
     }
-    interface TpAlert {
+    interface SnackbarExample {
+    }
+    interface TpAddCard {
         /**
-          * Define a variação de cor do componente.
+          * todo
          */
         "color"?: TpColor;
         /**
-          * Define o estado de carregamento do componente.
+          * todo
          */
-        "loading"?: boolean;
+        "iconName"?: string;
+        /**
+          * todo
+         */
+        "titulo"?: string;
+    }
+    interface TpAlertFixed {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor;
+    }
+    interface TpAnimation {
+        /**
+          * todo.
+         */
+        "animation": 'fadein' | 'slideup' | 'slideupStagger';
+        /**
+          * todo.
+         */
+        "delay": number;
+        /**
+          * todo.
+         */
+        "scrollTrigger": boolean;
+        /**
+          * todo.
+         */
+        "selector": string;
+    }
+    interface TpAutocomplete {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor;
+        /**
+          * Define se o componente deve ou não bloquear a renderização do dropdown.
+         */
+        "locked": boolean;
+        /**
+          * Define se o componente deve ou não renderizar o dropdown quando o slot que recebe um input ganha foco.
+         */
+        "openOnFocus": boolean;
+    }
+    interface TpBanner {
+        /**
+          * Define o alinhamento do conteúdo do banner.
+         */
+        "alignment": TpBannerAlignment;
+        /**
+          * Define se o componente é ou não usado como slide.
+         */
+        "slideMode": boolean;
+    }
+    interface TpBase {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "gap"?: 's00' | 's02' | 's04' | 's08' | string;
+        /**
+          * todo
+         */
+        "radius"?: 's00' | 's02' | 's04' | 's08' | string;
+        /**
+          * todo
+         */
+        "spacingH"?: | 's00'
+    | 's02'
+    | 's04'
+    | 's08'
+    | 's12'
+    | 's16'
+    | 's24'
+    | string;
+        /**
+          * todo
+         */
+        "spacingV"?: | 's00'
+    | 's02'
+    | 's04'
+    | 's08'
+    | 's12'
+    | 's16'
+    | 's24'
+    | string;
     }
     interface TpButtonCluster {
         /**
-          * Define a variação de estado do componente.
+          * Define a variação de cor do componente.
          */
-        "collapsed": boolean;
+        "color": TpColor;
+        /**
+          * Define o estato inicial do componente.
+         */
+        "initialCollapsedState": boolean;
+    }
+    interface TpCalendar {
         /**
           * Define a variação de cor do componente.
          */
-        "color"?: TpColor;
+        "color": TpColor;
         /**
-          * Define o estado de carregamento do componente.
+          * Define o valor inicial do intervalo de tempo que representa o conteúdo sendo exibido.
          */
-        "loading"?: boolean;
-        "toggleExternal": () => Promise<void>;
+        "initialTimeframe": TpCalendarTimeframe;
+        /**
+          * Define a etiqueta do conteúdo sendo exibido.
+         */
+        "label": string;
+    }
+    interface TpCalendarDay {
+        /**
+          * Define se o componente está no estado ativo.
+         */
+        "active": boolean;
+        /**
+          * Define se o componente está no estado concluido.
+         */
+        "checked": boolean;
+        /**
+          * Define se o componente está no estado desativado.
+         */
+        "disabled": boolean;
+        /**
+          * Define se o componente está no estado delineado.
+         */
+        "outlined": boolean;
+    }
+    interface TpCartaoRespostaItem {
+        /**
+          * Define a estilização de cor do componente (background com gradient).
+         */
+        "active": boolean;
+        /**
+          * Define a estilização de cor do componente (line-through).
+         */
+        "canceled": boolean;
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor;
+        /**
+          * Define a estilização de cor do componente (color success).
+         */
+        "correct": boolean;
+        /**
+          * Define a estilização de cor do componente (color brand).
+         */
+        "discursive": boolean;
+        /**
+          * Define a estilização de cor do componente (color warning).
+         */
+        "incorrect": boolean;
+        /**
+          * Define a estilização de cor do componente (background).
+         */
+        "printed": boolean;
+    }
+    interface TpCartaoRespostaLista {
+        /**
+          * Altera o layout do componente de grid para flex.
+         */
+        "flex": boolean;
     }
     interface TpChartBar {
         /**
           * Define a variação de cor do componente.
          */
-        "color"?: TpColor;
+        "color": TpColor;
         /**
           * Define a altura do componente.
          */
         "height": number;
         /**
-          * Define o estado de carregamento do componente.
-         */
-        "loading"?: boolean;
-        /**
-          * Define se o componente irá apresentar rótulo ou não.
+          * Define se um slot será disponibilizado para receber o label do chart.
          */
         "noLabel": boolean;
         /**
-          * Define o valor do preenchimento do componente.
+          * Define o valor da barra de progresso.
          */
         "value": number;
         /**
@@ -79,13 +260,55 @@ export namespace Components {
          */
         "color"?: TpColor;
         /**
-          * Define o valor representado pelo componente.
+          * Define os valores representados pelo componente.
          */
         "items": TpChartRadialItem[];
         /**
-          * Define a variação de tamanho do componente.
+          * Define o tamanho do componente.
          */
         "size"?: TpChartRadialSize;
+    }
+    interface TpCheckCard {
+        /**
+          * todo
+         */
+        "alert": boolean;
+        /**
+          * todo
+         */
+        "categoria"?: string;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "dataFinal"?: string;
+        /**
+          * todo
+         */
+        "dataInicial"?: string;
+        /**
+          * todo
+         */
+        "finalizada"?: string;
+        /**
+          * todo
+         */
+        "horaFinal"?: string;
+        /**
+          * todo
+         */
+        "horaInicial"?: string;
+        /**
+          * todo
+         */
+        "iconName"?: string;
+        /**
+          * todo
+         */
+        "titulo"?: string;
     }
     interface TpComparisonChartBar {
         /**
@@ -95,7 +318,7 @@ export namespace Components {
         /**
           * Define a variação de cor do componente.
          */
-        "color"?: TpColor;
+        "color": TpColor;
         /**
           * Define a altura do componente.
          */
@@ -109,10 +332,6 @@ export namespace Components {
          */
         "hasMarker": boolean;
         /**
-          * Define o estado de carregamento do componente.
-         */
-        "loading"?: boolean;
-        /**
           * Define a posição do marker na coluna.
          */
         "markerValue": number;
@@ -121,9 +340,173 @@ export namespace Components {
          */
         "noLabel": boolean;
     }
+    interface TpContextMenu {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor;
+        /**
+          * Define o estato inicial do componente.
+         */
+        "initialCollapsedState": boolean;
+    }
+    interface TpDownloadButton {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor;
+        /**
+          * Define se o download está finalizado.
+         */
+        "downloaded": boolean;
+        /**
+          * Define se o download está ou não em progresso.
+         */
+        "downloading": boolean;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "size": TpDownloadButtonSizes;
+        /**
+          * Define o progresso do download.
+         */
+        "value": number;
+    }
+    interface TpDropdown {
+    }
+    interface TpElemCartButton {
+        /**
+          * O total de itens no carrinho
+         */
+        "cartCount": number;
+    }
+    interface TpElemCartItem {
+    }
+    interface TpElemCartList {
+    }
+    interface TpElemNewsContent {
+    }
+    interface TpElemNewsHero {
+    }
+    interface TpElemNewsItem {
+    }
+    interface TpElemNewsList {
+        /**
+          * Define o modo de uso do componente.
+         */
+        "mode": NewsListMode;
+        /**
+          * Define a quantidade de items por página a serem carregados.
+         */
+        "perPage": number;
+    }
+    interface TpElemNewsSearch {
+        /**
+          * Define a rota base da página de categoria.
+         */
+        "baseCategoryPath": string;
+        /**
+          * Define a rota base da página de pesquisa por termo.
+         */
+        "baseSearchPath": string;
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color": TpColor1;
+    }
+    interface TpElemNewsShare {
+    }
+    interface TpElemProductDetail {
+        /**
+          * Dados do produto
+         */
+        "productData": ProductDetail;
+    }
+    interface TpElemProductInfo {
+        /**
+          * ID do produto.
+         */
+        "productId": number;
+    }
+    interface TpElemProductItem {
+        /**
+          * Dados referentes a um produto específico.
+         */
+        "product": ProductItem;
+    }
+    interface TpElemProductList {
+        /**
+          * O ID da categoria de produtos a serem listadas. Se nenhuma categoria for definida, todos os produtos serão listados.
+         */
+        "categoryId": number | null;
+    }
+    interface TpElemProductSearch {
+        /**
+          * A variação de cor do componente.
+         */
+        "color"?: TpColor1;
+        /**
+          * A altura máxima do dropdown.
+         */
+        "maxDropdownHeight": number;
+        /**
+          * O path da página de busca.
+         */
+        "searchPageUrl": string;
+    }
+    interface TpElemRelatedProducts {
+        /**
+          * ID do produto
+         */
+        "productId": number;
+    }
     interface TpExample {
         "color"?: TpColor;
         "icon"?: string;
+    }
+    interface TpFontZoom {
+        /**
+          * todo
+         */
+        "emitter": { emit: (value: TpFontZoomSize) => void };
+        /**
+          * todo
+         */
+        "value": TpFontZoomSize;
+    }
+    interface TpGroupAnimation {
+        /**
+          * Define a animação dos componentes do grupo.
+         */
+        "animation": TpGroupAnimationType;
+        /**
+          * Define o delay do inicio das animações em milissegundos.
+         */
+        "delay": number;
+        /**
+          * Define a duração das animações de cada componente do grupo em milissegundos.
+         */
+        "duration": number;
+        /**
+          * Define a porcentagem da área de scroll que o componente deve atingir para dar inicio a sua animação.
+         */
+        "intersectionTrigger": number;
+        /**
+          * Define se a animação dos componentes será ativada pelo scroll, quando o componente estiver dentro da área de scroll.
+         */
+        "scrollTrigger": boolean;
+        /**
+          * Define o seletor html/css da área de scroll.
+         */
+        "scroller": string;
+        /**
+          * Define o tempo entre o inicio de animações sequenciais em milissegundos.
+         */
+        "stagger": number;
+    }
+    interface TpHeader {
+    }
+    interface TpHero {
     }
     interface TpHorizontalChartBar {
         /**
@@ -151,6 +534,24 @@ export namespace Components {
          */
         "value": number;
     }
+    interface TpImagesCarousel {
+        /**
+          * As proporções do carrossel no formato h / w (height to width).
+         */
+        "aspectRatio": number;
+        /**
+          * Os objetos com as imagens a serem mostradas no carrossel.
+         */
+        "images": CarouselImage[];
+        /**
+          * Se o carrossel terá ou não o recurso de thumbs.
+         */
+        "thumbs": boolean;
+        /**
+          * Se as images terão ou não o recurso de zoom.
+         */
+        "zoom": boolean;
+    }
     interface TpInputContainer {
         /**
           * Define a variação de cor do componente.
@@ -174,18 +575,102 @@ export namespace Components {
         "state"?: 'error' | 'success';
     }
     interface TpLoader {
+        "color": TpColor;
+        "fixed": boolean;
+        "size": 'full' | 'auto';
+        "type": 'secondary' | undefined;
+    }
+    interface TpNavbar {
         /**
-          * Define a variação de cor do componente.
+          * todo
          */
         "color"?: TpColor;
         /**
-          * Define a posição do componente.
+          * todo
          */
-        "fixed": boolean;
+        "name"?: 'secondary' | 'transparent';
+    }
+    interface TpOffline {
         /**
-          * Define a variação do componente.
+          * Define o title do componente
          */
-        "tpName"?: TpLoaderType['tp-name'];
+        "offlineText": string;
+        /**
+          * Define o title do componente
+         */
+        "offlineTitle": string;
+    }
+    interface TpPagination {
+        /**
+          * A variação de cor dos botões do componente.
+         */
+        "color": TpColor;
+        /**
+          * Índice da página atual.
+         */
+        "currentPage": number;
+        /**
+          * O número total de páginas.
+         */
+        "pageCount": number;
+        /**
+          * A variação de tamanho dos botões do componente.
+         */
+        "size": TpPaginationSize;
+    }
+    interface TpPlusminus {
+        /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled": boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "disabled"?: 'minus' | 'plus' | 'both';
+        /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        /**
+          * todo
+         */
+        "size"?: 'xl';
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot": boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
+    }
+    interface TpQuestion {
+        /**
+          * todo
+         */
+        "collapsed": boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "texto"?: string;
+    }
+    interface TpRateBar {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
     }
     interface TpRateLike {
         /**
@@ -198,6 +683,58 @@ export namespace Components {
         "status"?: 'like' | 'dislike';
     }
     interface TpSegmentContainer {
+    }
+    interface TpThemes {
+        /**
+          * todo
+         */
+        "ativo"?: 'theme-gold' | 'theme-recursos' | string;
+        /**
+          * todo
+         */
+        "temas"?: TpTema[];
+    }
+    interface TpTiles {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "label"?: string;
+        /**
+          * todo
+         */
+        "selected": boolean;
+        /**
+          * todo
+         */
+        "solid": boolean;
+        /**
+          * todo
+         */
+        "titulo"?: string;
+    }
+    interface TpToggle {
+        /**
+          * todo
+         */
+        "collapsed": boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "iconClick": boolean;
+    }
+    interface TpToolbar {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
     }
     interface TpTooltip {
         /**
@@ -233,14 +770,76 @@ export namespace Components {
          */
         "toggleOnHover": (event?: any) => Promise<void>;
     }
+    interface TpVideoThumbnail {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "size"?: TpVideoThumbnailSize;
+        /**
+          * todo
+         */
+        "url"?: string;
+        /**
+          * todo
+         */
+        "value": number;
+    }
 }
 export interface TpButtonClusterCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLTpButtonClusterElement;
 }
+export interface TpCalendarCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpCalendarElement;
+}
+export interface TpCheckCardCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpCheckCardElement;
+}
+export interface TpContextMenuCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpContextMenuElement;
+}
+export interface TpElemCartListCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpElemCartListElement;
+}
+export interface TpElemProductDetailCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpElemProductDetailElement;
+}
+export interface TpElemProductInfoCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpElemProductInfoElement;
+}
+export interface TpHeaderCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpHeaderElement;
+}
+export interface TpOfflineCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpOfflineElement;
+}
+export interface TpPaginationCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpPaginationElement;
+}
+export interface TpPlusminusCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpPlusminusElement;
+}
 export interface TpRateLikeCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLTpRateLikeElement;
+}
+export interface TpThemesCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLTpThemesElement;
 }
 declare global {
     interface HTMLDialogExampleElement extends Components.DialogExample, HTMLStencilElement {
@@ -261,14 +860,50 @@ declare global {
         prototype: HTMLSheetExampleElement;
         new (): HTMLSheetExampleElement;
     };
-    interface HTMLTpAlertElement extends Components.TpAlert, HTMLStencilElement {
+    interface HTMLSnackbarExampleElement extends Components.SnackbarExample, HTMLStencilElement {
     }
-    var HTMLTpAlertElement: {
-        prototype: HTMLTpAlertElement;
-        new (): HTMLTpAlertElement;
+    var HTMLSnackbarExampleElement: {
+        prototype: HTMLSnackbarExampleElement;
+        new (): HTMLSnackbarExampleElement;
+    };
+    interface HTMLTpAddCardElement extends Components.TpAddCard, HTMLStencilElement {
+    }
+    var HTMLTpAddCardElement: {
+        prototype: HTMLTpAddCardElement;
+        new (): HTMLTpAddCardElement;
+    };
+    interface HTMLTpAlertFixedElement extends Components.TpAlertFixed, HTMLStencilElement {
+    }
+    var HTMLTpAlertFixedElement: {
+        prototype: HTMLTpAlertFixedElement;
+        new (): HTMLTpAlertFixedElement;
+    };
+    interface HTMLTpAnimationElement extends Components.TpAnimation, HTMLStencilElement {
+    }
+    var HTMLTpAnimationElement: {
+        prototype: HTMLTpAnimationElement;
+        new (): HTMLTpAnimationElement;
+    };
+    interface HTMLTpAutocompleteElement extends Components.TpAutocomplete, HTMLStencilElement {
+    }
+    var HTMLTpAutocompleteElement: {
+        prototype: HTMLTpAutocompleteElement;
+        new (): HTMLTpAutocompleteElement;
+    };
+    interface HTMLTpBannerElement extends Components.TpBanner, HTMLStencilElement {
+    }
+    var HTMLTpBannerElement: {
+        prototype: HTMLTpBannerElement;
+        new (): HTMLTpBannerElement;
+    };
+    interface HTMLTpBaseElement extends Components.TpBase, HTMLStencilElement {
+    }
+    var HTMLTpBaseElement: {
+        prototype: HTMLTpBaseElement;
+        new (): HTMLTpBaseElement;
     };
     interface HTMLTpButtonClusterElementEventMap {
-        "tpButtonClusterCollapsed": boolean;
+        "tpCollapse": boolean;
     }
     interface HTMLTpButtonClusterElement extends Components.TpButtonCluster, HTMLStencilElement {
         addEventListener<K extends keyof HTMLTpButtonClusterElementEventMap>(type: K, listener: (this: HTMLTpButtonClusterElement, ev: TpButtonClusterCustomEvent<HTMLTpButtonClusterElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
@@ -284,6 +919,42 @@ declare global {
         prototype: HTMLTpButtonClusterElement;
         new (): HTMLTpButtonClusterElement;
     };
+    interface HTMLTpCalendarElementEventMap {
+        "tpCalendarChange": any;
+        "tpTimeframeToggle": any;
+    }
+    interface HTMLTpCalendarElement extends Components.TpCalendar, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpCalendarElementEventMap>(type: K, listener: (this: HTMLTpCalendarElement, ev: TpCalendarCustomEvent<HTMLTpCalendarElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpCalendarElementEventMap>(type: K, listener: (this: HTMLTpCalendarElement, ev: TpCalendarCustomEvent<HTMLTpCalendarElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpCalendarElement: {
+        prototype: HTMLTpCalendarElement;
+        new (): HTMLTpCalendarElement;
+    };
+    interface HTMLTpCalendarDayElement extends Components.TpCalendarDay, HTMLStencilElement {
+    }
+    var HTMLTpCalendarDayElement: {
+        prototype: HTMLTpCalendarDayElement;
+        new (): HTMLTpCalendarDayElement;
+    };
+    interface HTMLTpCartaoRespostaItemElement extends Components.TpCartaoRespostaItem, HTMLStencilElement {
+    }
+    var HTMLTpCartaoRespostaItemElement: {
+        prototype: HTMLTpCartaoRespostaItemElement;
+        new (): HTMLTpCartaoRespostaItemElement;
+    };
+    interface HTMLTpCartaoRespostaListaElement extends Components.TpCartaoRespostaLista, HTMLStencilElement {
+    }
+    var HTMLTpCartaoRespostaListaElement: {
+        prototype: HTMLTpCartaoRespostaListaElement;
+        new (): HTMLTpCartaoRespostaListaElement;
+    };
     interface HTMLTpChartBarElement extends Components.TpChartBar, HTMLStencilElement {
     }
     var HTMLTpChartBarElement: {
@@ -296,11 +967,181 @@ declare global {
         prototype: HTMLTpChartRadialElement;
         new (): HTMLTpChartRadialElement;
     };
+    interface HTMLTpCheckCardElementEventMap {
+        "tpClick": any;
+        "tpTooltipClose": any;
+    }
+    interface HTMLTpCheckCardElement extends Components.TpCheckCard, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpCheckCardElementEventMap>(type: K, listener: (this: HTMLTpCheckCardElement, ev: TpCheckCardCustomEvent<HTMLTpCheckCardElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpCheckCardElementEventMap>(type: K, listener: (this: HTMLTpCheckCardElement, ev: TpCheckCardCustomEvent<HTMLTpCheckCardElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpCheckCardElement: {
+        prototype: HTMLTpCheckCardElement;
+        new (): HTMLTpCheckCardElement;
+    };
     interface HTMLTpComparisonChartBarElement extends Components.TpComparisonChartBar, HTMLStencilElement {
     }
     var HTMLTpComparisonChartBarElement: {
         prototype: HTMLTpComparisonChartBarElement;
         new (): HTMLTpComparisonChartBarElement;
+    };
+    interface HTMLTpContextMenuElementEventMap {
+        "tpCollapse": boolean;
+    }
+    interface HTMLTpContextMenuElement extends Components.TpContextMenu, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpContextMenuElementEventMap>(type: K, listener: (this: HTMLTpContextMenuElement, ev: TpContextMenuCustomEvent<HTMLTpContextMenuElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpContextMenuElementEventMap>(type: K, listener: (this: HTMLTpContextMenuElement, ev: TpContextMenuCustomEvent<HTMLTpContextMenuElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpContextMenuElement: {
+        prototype: HTMLTpContextMenuElement;
+        new (): HTMLTpContextMenuElement;
+    };
+    interface HTMLTpDownloadButtonElement extends Components.TpDownloadButton, HTMLStencilElement {
+    }
+    var HTMLTpDownloadButtonElement: {
+        prototype: HTMLTpDownloadButtonElement;
+        new (): HTMLTpDownloadButtonElement;
+    };
+    interface HTMLTpDropdownElement extends Components.TpDropdown, HTMLStencilElement {
+    }
+    var HTMLTpDropdownElement: {
+        prototype: HTMLTpDropdownElement;
+        new (): HTMLTpDropdownElement;
+    };
+    interface HTMLTpElemCartButtonElement extends Components.TpElemCartButton, HTMLStencilElement {
+    }
+    var HTMLTpElemCartButtonElement: {
+        prototype: HTMLTpElemCartButtonElement;
+        new (): HTMLTpElemCartButtonElement;
+    };
+    interface HTMLTpElemCartItemElement extends Components.TpElemCartItem, HTMLStencilElement {
+    }
+    var HTMLTpElemCartItemElement: {
+        prototype: HTMLTpElemCartItemElement;
+        new (): HTMLTpElemCartItemElement;
+    };
+    interface HTMLTpElemCartListElementEventMap {
+        "updatedCart": CartInfo;
+    }
+    interface HTMLTpElemCartListElement extends Components.TpElemCartList, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpElemCartListElementEventMap>(type: K, listener: (this: HTMLTpElemCartListElement, ev: TpElemCartListCustomEvent<HTMLTpElemCartListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpElemCartListElementEventMap>(type: K, listener: (this: HTMLTpElemCartListElement, ev: TpElemCartListCustomEvent<HTMLTpElemCartListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpElemCartListElement: {
+        prototype: HTMLTpElemCartListElement;
+        new (): HTMLTpElemCartListElement;
+    };
+    interface HTMLTpElemNewsContentElement extends Components.TpElemNewsContent, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsContentElement: {
+        prototype: HTMLTpElemNewsContentElement;
+        new (): HTMLTpElemNewsContentElement;
+    };
+    interface HTMLTpElemNewsHeroElement extends Components.TpElemNewsHero, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsHeroElement: {
+        prototype: HTMLTpElemNewsHeroElement;
+        new (): HTMLTpElemNewsHeroElement;
+    };
+    interface HTMLTpElemNewsItemElement extends Components.TpElemNewsItem, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsItemElement: {
+        prototype: HTMLTpElemNewsItemElement;
+        new (): HTMLTpElemNewsItemElement;
+    };
+    interface HTMLTpElemNewsListElement extends Components.TpElemNewsList, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsListElement: {
+        prototype: HTMLTpElemNewsListElement;
+        new (): HTMLTpElemNewsListElement;
+    };
+    interface HTMLTpElemNewsSearchElement extends Components.TpElemNewsSearch, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsSearchElement: {
+        prototype: HTMLTpElemNewsSearchElement;
+        new (): HTMLTpElemNewsSearchElement;
+    };
+    interface HTMLTpElemNewsShareElement extends Components.TpElemNewsShare, HTMLStencilElement {
+    }
+    var HTMLTpElemNewsShareElement: {
+        prototype: HTMLTpElemNewsShareElement;
+        new (): HTMLTpElemNewsShareElement;
+    };
+    interface HTMLTpElemProductDetailElementEventMap {
+        "addToCartEvent": AddToCartData;
+    }
+    interface HTMLTpElemProductDetailElement extends Components.TpElemProductDetail, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpElemProductDetailElementEventMap>(type: K, listener: (this: HTMLTpElemProductDetailElement, ev: TpElemProductDetailCustomEvent<HTMLTpElemProductDetailElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpElemProductDetailElementEventMap>(type: K, listener: (this: HTMLTpElemProductDetailElement, ev: TpElemProductDetailCustomEvent<HTMLTpElemProductDetailElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpElemProductDetailElement: {
+        prototype: HTMLTpElemProductDetailElement;
+        new (): HTMLTpElemProductDetailElement;
+    };
+    interface HTMLTpElemProductInfoElementEventMap {
+        "updatedCart": CartInfo;
+    }
+    interface HTMLTpElemProductInfoElement extends Components.TpElemProductInfo, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpElemProductInfoElementEventMap>(type: K, listener: (this: HTMLTpElemProductInfoElement, ev: TpElemProductInfoCustomEvent<HTMLTpElemProductInfoElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpElemProductInfoElementEventMap>(type: K, listener: (this: HTMLTpElemProductInfoElement, ev: TpElemProductInfoCustomEvent<HTMLTpElemProductInfoElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpElemProductInfoElement: {
+        prototype: HTMLTpElemProductInfoElement;
+        new (): HTMLTpElemProductInfoElement;
+    };
+    interface HTMLTpElemProductItemElement extends Components.TpElemProductItem, HTMLStencilElement {
+    }
+    var HTMLTpElemProductItemElement: {
+        prototype: HTMLTpElemProductItemElement;
+        new (): HTMLTpElemProductItemElement;
+    };
+    interface HTMLTpElemProductListElement extends Components.TpElemProductList, HTMLStencilElement {
+    }
+    var HTMLTpElemProductListElement: {
+        prototype: HTMLTpElemProductListElement;
+        new (): HTMLTpElemProductListElement;
+    };
+    interface HTMLTpElemProductSearchElement extends Components.TpElemProductSearch, HTMLStencilElement {
+    }
+    var HTMLTpElemProductSearchElement: {
+        prototype: HTMLTpElemProductSearchElement;
+        new (): HTMLTpElemProductSearchElement;
+    };
+    interface HTMLTpElemRelatedProductsElement extends Components.TpElemRelatedProducts, HTMLStencilElement {
+    }
+    var HTMLTpElemRelatedProductsElement: {
+        prototype: HTMLTpElemRelatedProductsElement;
+        new (): HTMLTpElemRelatedProductsElement;
     };
     interface HTMLTpExampleElement extends Components.TpExample, HTMLStencilElement {
     }
@@ -308,11 +1149,52 @@ declare global {
         prototype: HTMLTpExampleElement;
         new (): HTMLTpExampleElement;
     };
+    interface HTMLTpFontZoomElement extends Components.TpFontZoom, HTMLStencilElement {
+    }
+    var HTMLTpFontZoomElement: {
+        prototype: HTMLTpFontZoomElement;
+        new (): HTMLTpFontZoomElement;
+    };
+    interface HTMLTpGroupAnimationElement extends Components.TpGroupAnimation, HTMLStencilElement {
+    }
+    var HTMLTpGroupAnimationElement: {
+        prototype: HTMLTpGroupAnimationElement;
+        new (): HTMLTpGroupAnimationElement;
+    };
+    interface HTMLTpHeaderElementEventMap {
+        "headerResize": headerResizeEventDetail;
+    }
+    interface HTMLTpHeaderElement extends Components.TpHeader, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpHeaderElementEventMap>(type: K, listener: (this: HTMLTpHeaderElement, ev: TpHeaderCustomEvent<HTMLTpHeaderElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpHeaderElementEventMap>(type: K, listener: (this: HTMLTpHeaderElement, ev: TpHeaderCustomEvent<HTMLTpHeaderElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpHeaderElement: {
+        prototype: HTMLTpHeaderElement;
+        new (): HTMLTpHeaderElement;
+    };
+    interface HTMLTpHeroElement extends Components.TpHero, HTMLStencilElement {
+    }
+    var HTMLTpHeroElement: {
+        prototype: HTMLTpHeroElement;
+        new (): HTMLTpHeroElement;
+    };
     interface HTMLTpHorizontalChartBarElement extends Components.TpHorizontalChartBar, HTMLStencilElement {
     }
     var HTMLTpHorizontalChartBarElement: {
         prototype: HTMLTpHorizontalChartBarElement;
         new (): HTMLTpHorizontalChartBarElement;
+    };
+    interface HTMLTpImagesCarouselElement extends Components.TpImagesCarousel, HTMLStencilElement {
+    }
+    var HTMLTpImagesCarouselElement: {
+        prototype: HTMLTpImagesCarouselElement;
+        new (): HTMLTpImagesCarouselElement;
     };
     interface HTMLTpInputContainerElement extends Components.TpInputContainer, HTMLStencilElement {
     }
@@ -325,6 +1207,79 @@ declare global {
     var HTMLTpLoaderElement: {
         prototype: HTMLTpLoaderElement;
         new (): HTMLTpLoaderElement;
+    };
+    interface HTMLTpNavbarElement extends Components.TpNavbar, HTMLStencilElement {
+    }
+    var HTMLTpNavbarElement: {
+        prototype: HTMLTpNavbarElement;
+        new (): HTMLTpNavbarElement;
+    };
+    interface HTMLTpOfflineElementEventMap {
+        "tpClick": void;
+    }
+    interface HTMLTpOfflineElement extends Components.TpOffline, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpOfflineElementEventMap>(type: K, listener: (this: HTMLTpOfflineElement, ev: TpOfflineCustomEvent<HTMLTpOfflineElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpOfflineElementEventMap>(type: K, listener: (this: HTMLTpOfflineElement, ev: TpOfflineCustomEvent<HTMLTpOfflineElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpOfflineElement: {
+        prototype: HTMLTpOfflineElement;
+        new (): HTMLTpOfflineElement;
+    };
+    interface HTMLTpPaginationElementEventMap {
+        "tpNavigate": number;
+        "tpPrevious": null;
+        "tpNext": null;
+        "tpPageJump": TpPaginationDirection;
+    }
+    interface HTMLTpPaginationElement extends Components.TpPagination, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpPaginationElementEventMap>(type: K, listener: (this: HTMLTpPaginationElement, ev: TpPaginationCustomEvent<HTMLTpPaginationElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpPaginationElementEventMap>(type: K, listener: (this: HTMLTpPaginationElement, ev: TpPaginationCustomEvent<HTMLTpPaginationElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpPaginationElement: {
+        prototype: HTMLTpPaginationElement;
+        new (): HTMLTpPaginationElement;
+    };
+    interface HTMLTpPlusminusElementEventMap {
+        "tpChange": TpPlusMinusStatus;
+        "tpChangeAlt": number;
+    }
+    interface HTMLTpPlusminusElement extends Components.TpPlusminus, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpPlusminusElementEventMap>(type: K, listener: (this: HTMLTpPlusminusElement, ev: TpPlusminusCustomEvent<HTMLTpPlusminusElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpPlusminusElementEventMap>(type: K, listener: (this: HTMLTpPlusminusElement, ev: TpPlusminusCustomEvent<HTMLTpPlusminusElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpPlusminusElement: {
+        prototype: HTMLTpPlusminusElement;
+        new (): HTMLTpPlusminusElement;
+    };
+    interface HTMLTpQuestionElement extends Components.TpQuestion, HTMLStencilElement {
+    }
+    var HTMLTpQuestionElement: {
+        prototype: HTMLTpQuestionElement;
+        new (): HTMLTpQuestionElement;
+    };
+    interface HTMLTpRateBarElement extends Components.TpRateBar, HTMLStencilElement {
+    }
+    var HTMLTpRateBarElement: {
+        prototype: HTMLTpRateBarElement;
+        new (): HTMLTpRateBarElement;
     };
     interface HTMLTpRateLikeElementEventMap {
         "tpChange": 'like' | 'dislike';
@@ -349,28 +1304,114 @@ declare global {
         prototype: HTMLTpSegmentContainerElement;
         new (): HTMLTpSegmentContainerElement;
     };
+    interface HTMLTpThemesElementEventMap {
+        "tpChange": string;
+    }
+    interface HTMLTpThemesElement extends Components.TpThemes, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLTpThemesElementEventMap>(type: K, listener: (this: HTMLTpThemesElement, ev: TpThemesCustomEvent<HTMLTpThemesElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLTpThemesElementEventMap>(type: K, listener: (this: HTMLTpThemesElement, ev: TpThemesCustomEvent<HTMLTpThemesElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLTpThemesElement: {
+        prototype: HTMLTpThemesElement;
+        new (): HTMLTpThemesElement;
+    };
+    interface HTMLTpTilesElement extends Components.TpTiles, HTMLStencilElement {
+    }
+    var HTMLTpTilesElement: {
+        prototype: HTMLTpTilesElement;
+        new (): HTMLTpTilesElement;
+    };
+    interface HTMLTpToggleElement extends Components.TpToggle, HTMLStencilElement {
+    }
+    var HTMLTpToggleElement: {
+        prototype: HTMLTpToggleElement;
+        new (): HTMLTpToggleElement;
+    };
+    interface HTMLTpToolbarElement extends Components.TpToolbar, HTMLStencilElement {
+    }
+    var HTMLTpToolbarElement: {
+        prototype: HTMLTpToolbarElement;
+        new (): HTMLTpToolbarElement;
+    };
     interface HTMLTpTooltipElement extends Components.TpTooltip, HTMLStencilElement {
     }
     var HTMLTpTooltipElement: {
         prototype: HTMLTpTooltipElement;
         new (): HTMLTpTooltipElement;
     };
+    interface HTMLTpVideoThumbnailElement extends Components.TpVideoThumbnail, HTMLStencilElement {
+    }
+    var HTMLTpVideoThumbnailElement: {
+        prototype: HTMLTpVideoThumbnailElement;
+        new (): HTMLTpVideoThumbnailElement;
+    };
     interface HTMLElementTagNameMap {
         "dialog-example": HTMLDialogExampleElement;
         "modal-example": HTMLModalExampleElement;
         "sheet-example": HTMLSheetExampleElement;
-        "tp-alert": HTMLTpAlertElement;
+        "snackbar-example": HTMLSnackbarExampleElement;
+        "tp-add-card": HTMLTpAddCardElement;
+        "tp-alert-fixed": HTMLTpAlertFixedElement;
+        "tp-animation": HTMLTpAnimationElement;
+        "tp-autocomplete": HTMLTpAutocompleteElement;
+        "tp-banner": HTMLTpBannerElement;
+        "tp-base": HTMLTpBaseElement;
         "tp-button-cluster": HTMLTpButtonClusterElement;
+        "tp-calendar": HTMLTpCalendarElement;
+        "tp-calendar-day": HTMLTpCalendarDayElement;
+        "tp-cartao-resposta-item": HTMLTpCartaoRespostaItemElement;
+        "tp-cartao-resposta-lista": HTMLTpCartaoRespostaListaElement;
         "tp-chart-bar": HTMLTpChartBarElement;
         "tp-chart-radial": HTMLTpChartRadialElement;
+        "tp-check-card": HTMLTpCheckCardElement;
         "tp-comparison-chart-bar": HTMLTpComparisonChartBarElement;
+        "tp-context-menu": HTMLTpContextMenuElement;
+        "tp-download-button": HTMLTpDownloadButtonElement;
+        "tp-dropdown": HTMLTpDropdownElement;
+        "tp-elem-cart-button": HTMLTpElemCartButtonElement;
+        "tp-elem-cart-item": HTMLTpElemCartItemElement;
+        "tp-elem-cart-list": HTMLTpElemCartListElement;
+        "tp-elem-news-content": HTMLTpElemNewsContentElement;
+        "tp-elem-news-hero": HTMLTpElemNewsHeroElement;
+        "tp-elem-news-item": HTMLTpElemNewsItemElement;
+        "tp-elem-news-list": HTMLTpElemNewsListElement;
+        "tp-elem-news-search": HTMLTpElemNewsSearchElement;
+        "tp-elem-news-share": HTMLTpElemNewsShareElement;
+        "tp-elem-product-detail": HTMLTpElemProductDetailElement;
+        "tp-elem-product-info": HTMLTpElemProductInfoElement;
+        "tp-elem-product-item": HTMLTpElemProductItemElement;
+        "tp-elem-product-list": HTMLTpElemProductListElement;
+        "tp-elem-product-search": HTMLTpElemProductSearchElement;
+        "tp-elem-related-products": HTMLTpElemRelatedProductsElement;
         "tp-example": HTMLTpExampleElement;
+        "tp-font-zoom": HTMLTpFontZoomElement;
+        "tp-group-animation": HTMLTpGroupAnimationElement;
+        "tp-header": HTMLTpHeaderElement;
+        "tp-hero": HTMLTpHeroElement;
         "tp-horizontal-chart-bar": HTMLTpHorizontalChartBarElement;
+        "tp-images-carousel": HTMLTpImagesCarouselElement;
         "tp-input-container": HTMLTpInputContainerElement;
         "tp-loader": HTMLTpLoaderElement;
+        "tp-navbar": HTMLTpNavbarElement;
+        "tp-offline": HTMLTpOfflineElement;
+        "tp-pagination": HTMLTpPaginationElement;
+        "tp-plusminus": HTMLTpPlusminusElement;
+        "tp-question": HTMLTpQuestionElement;
+        "tp-rate-bar": HTMLTpRateBarElement;
         "tp-rate-like": HTMLTpRateLikeElement;
         "tp-segment-container": HTMLTpSegmentContainerElement;
+        "tp-themes": HTMLTpThemesElement;
+        "tp-tiles": HTMLTpTilesElement;
+        "tp-toggle": HTMLTpToggleElement;
+        "tp-toolbar": HTMLTpToolbarElement;
         "tp-tooltip": HTMLTpTooltipElement;
+        "tp-video-thumbnail": HTMLTpVideoThumbnailElement;
     }
 }
 declare namespace LocalJSX {
@@ -380,33 +1421,195 @@ declare namespace LocalJSX {
     }
     interface SheetExample {
     }
-    interface TpAlert {
+    interface SnackbarExample {
+    }
+    interface TpAddCard {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "iconName"?: string;
+        /**
+          * todo
+         */
+        "titulo"?: string;
+    }
+    interface TpAlertFixed {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color"?: TpColor;
+    }
+    interface TpAnimation {
+        /**
+          * todo.
+         */
+        "animation"?: 'fadein' | 'slideup' | 'slideupStagger';
+        /**
+          * todo.
+         */
+        "delay"?: number;
+        /**
+          * todo.
+         */
+        "scrollTrigger"?: boolean;
+        /**
+          * todo.
+         */
+        "selector"?: string;
+    }
+    interface TpAutocomplete {
         /**
           * Define a variação de cor do componente.
          */
         "color"?: TpColor;
         /**
-          * Define o estado de carregamento do componente.
+          * Define se o componente deve ou não bloquear a renderização do dropdown.
          */
-        "loading"?: boolean;
+        "locked"?: boolean;
+        /**
+          * Define se o componente deve ou não renderizar o dropdown quando o slot que recebe um input ganha foco.
+         */
+        "openOnFocus"?: boolean;
+    }
+    interface TpBanner {
+        /**
+          * Define o alinhamento do conteúdo do banner.
+         */
+        "alignment"?: TpBannerAlignment;
+        /**
+          * Define se o componente é ou não usado como slide.
+         */
+        "slideMode"?: boolean;
+    }
+    interface TpBase {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "gap"?: 's00' | 's02' | 's04' | 's08' | string;
+        /**
+          * todo
+         */
+        "radius"?: 's00' | 's02' | 's04' | 's08' | string;
+        /**
+          * todo
+         */
+        "spacingH"?: | 's00'
+    | 's02'
+    | 's04'
+    | 's08'
+    | 's12'
+    | 's16'
+    | 's24'
+    | string;
+        /**
+          * todo
+         */
+        "spacingV"?: | 's00'
+    | 's02'
+    | 's04'
+    | 's08'
+    | 's12'
+    | 's16'
+    | 's24'
+    | string;
     }
     interface TpButtonCluster {
         /**
-          * Define a variação de estado do componente.
+          * Define a variação de cor do componente.
          */
-        "collapsed"?: boolean;
+        "color"?: TpColor;
+        /**
+          * Define o estato inicial do componente.
+         */
+        "initialCollapsedState"?: boolean;
+        /**
+          * Emitido quando a propriedade collapsed é alterada.
+         */
+        "onTpCollapse"?: (event: TpButtonClusterCustomEvent<boolean>) => void;
+    }
+    interface TpCalendar {
         /**
           * Define a variação de cor do componente.
          */
         "color"?: TpColor;
         /**
-          * Define o estado de carregamento do componente.
+          * Define o valor inicial do intervalo de tempo que representa o conteúdo sendo exibido.
          */
-        "loading"?: boolean;
+        "initialTimeframe"?: TpCalendarTimeframe;
         /**
-          * Emitido quando a propriedade collapsed é alterada.
+          * Define a etiqueta do conteúdo sendo exibido.
          */
-        "onTpButtonClusterCollapsed"?: (event: TpButtonClusterCustomEvent<boolean>) => void;
+        "label"?: string;
+        /**
+          * Evento emitido quando o conteúdo deve avançar ou retroceder por requisição do usuário
+         */
+        "onTpCalendarChange"?: (event: TpCalendarCustomEvent<any>) => void;
+        /**
+          * Evento emitido quando o intervalo de tempo exibido deve mudar por requisição do usuário
+         */
+        "onTpTimeframeToggle"?: (event: TpCalendarCustomEvent<any>) => void;
+    }
+    interface TpCalendarDay {
+        /**
+          * Define se o componente está no estado ativo.
+         */
+        "active"?: boolean;
+        /**
+          * Define se o componente está no estado concluido.
+         */
+        "checked"?: boolean;
+        /**
+          * Define se o componente está no estado desativado.
+         */
+        "disabled"?: boolean;
+        /**
+          * Define se o componente está no estado delineado.
+         */
+        "outlined"?: boolean;
+    }
+    interface TpCartaoRespostaItem {
+        /**
+          * Define a estilização de cor do componente (background com gradient).
+         */
+        "active"?: boolean;
+        /**
+          * Define a estilização de cor do componente (line-through).
+         */
+        "canceled"?: boolean;
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color"?: TpColor;
+        /**
+          * Define a estilização de cor do componente (color success).
+         */
+        "correct"?: boolean;
+        /**
+          * Define a estilização de cor do componente (color brand).
+         */
+        "discursive"?: boolean;
+        /**
+          * Define a estilização de cor do componente (color warning).
+         */
+        "incorrect"?: boolean;
+        /**
+          * Define a estilização de cor do componente (background).
+         */
+        "printed"?: boolean;
+    }
+    interface TpCartaoRespostaLista {
+        /**
+          * Altera o layout do componente de grid para flex.
+         */
+        "flex"?: boolean;
     }
     interface TpChartBar {
         /**
@@ -418,15 +1621,11 @@ declare namespace LocalJSX {
          */
         "height"?: number;
         /**
-          * Define o estado de carregamento do componente.
-         */
-        "loading"?: boolean;
-        /**
-          * Define se o componente irá apresentar rótulo ou não.
+          * Define se um slot será disponibilizado para receber o label do chart.
          */
         "noLabel"?: boolean;
         /**
-          * Define o valor do preenchimento do componente.
+          * Define o valor da barra de progresso.
          */
         "value"?: number;
         /**
@@ -440,13 +1639,63 @@ declare namespace LocalJSX {
          */
         "color"?: TpColor;
         /**
-          * Define o valor representado pelo componente.
+          * Define os valores representados pelo componente.
          */
         "items"?: TpChartRadialItem[];
         /**
-          * Define a variação de tamanho do componente.
+          * Define o tamanho do componente.
          */
         "size"?: TpChartRadialSize;
+    }
+    interface TpCheckCard {
+        /**
+          * todo
+         */
+        "alert"?: boolean;
+        /**
+          * todo
+         */
+        "categoria"?: string;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "dataFinal"?: string;
+        /**
+          * todo
+         */
+        "dataInicial"?: string;
+        /**
+          * todo
+         */
+        "finalizada"?: string;
+        /**
+          * todo
+         */
+        "horaFinal"?: string;
+        /**
+          * todo
+         */
+        "horaInicial"?: string;
+        /**
+          * todo
+         */
+        "iconName"?: string;
+        /**
+          * todo
+         */
+        "onTpClick"?: (event: TpCheckCardCustomEvent<any>) => void;
+        /**
+          * todo
+         */
+        "onTpTooltipClose"?: (event: TpCheckCardCustomEvent<any>) => void;
+        /**
+          * todo
+         */
+        "titulo"?: string;
     }
     interface TpComparisonChartBar {
         /**
@@ -470,10 +1719,6 @@ declare namespace LocalJSX {
          */
         "hasMarker"?: boolean;
         /**
-          * Define o estado de carregamento do componente.
-         */
-        "loading"?: boolean;
-        /**
           * Define a posição do marker na coluna.
          */
         "markerValue"?: number;
@@ -482,9 +1727,193 @@ declare namespace LocalJSX {
          */
         "noLabel"?: boolean;
     }
+    interface TpContextMenu {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color"?: TpColor;
+        /**
+          * Define o estato inicial do componente.
+         */
+        "initialCollapsedState"?: boolean;
+        /**
+          * Emitido quando a propriedade collapsed é alterada.
+         */
+        "onTpCollapse"?: (event: TpContextMenuCustomEvent<boolean>) => void;
+    }
+    interface TpDownloadButton {
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color"?: TpColor;
+        /**
+          * Define se o download está finalizado.
+         */
+        "downloaded"?: boolean;
+        /**
+          * Define se o download está ou não em progresso.
+         */
+        "downloading"?: boolean;
+        /**
+          * Define a variação de tamanho do componente.
+         */
+        "size"?: TpDownloadButtonSizes;
+        /**
+          * Define o progresso do download.
+         */
+        "value"?: number;
+    }
+    interface TpDropdown {
+    }
+    interface TpElemCartButton {
+        /**
+          * O total de itens no carrinho
+         */
+        "cartCount"?: number;
+    }
+    interface TpElemCartItem {
+    }
+    interface TpElemCartList {
+        /**
+          * Emite o updated cart.
+         */
+        "onUpdatedCart"?: (event: TpElemCartListCustomEvent<CartInfo>) => void;
+    }
+    interface TpElemNewsContent {
+    }
+    interface TpElemNewsHero {
+    }
+    interface TpElemNewsItem {
+    }
+    interface TpElemNewsList {
+        /**
+          * Define o modo de uso do componente.
+         */
+        "mode"?: NewsListMode;
+        /**
+          * Define a quantidade de items por página a serem carregados.
+         */
+        "perPage"?: number;
+    }
+    interface TpElemNewsSearch {
+        /**
+          * Define a rota base da página de categoria.
+         */
+        "baseCategoryPath"?: string;
+        /**
+          * Define a rota base da página de pesquisa por termo.
+         */
+        "baseSearchPath"?: string;
+        /**
+          * Define a variação de cor do componente.
+         */
+        "color"?: TpColor1;
+    }
+    interface TpElemNewsShare {
+    }
+    interface TpElemProductDetail {
+        /**
+          * Emite o novo cartCount.
+         */
+        "onAddToCartEvent"?: (event: TpElemProductDetailCustomEvent<AddToCartData>) => void;
+        /**
+          * Dados do produto
+         */
+        "productData"?: ProductDetail;
+    }
+    interface TpElemProductInfo {
+        /**
+          * Emite o evento updatedCart.
+         */
+        "onUpdatedCart"?: (event: TpElemProductInfoCustomEvent<CartInfo>) => void;
+        /**
+          * ID do produto.
+         */
+        "productId"?: number;
+    }
+    interface TpElemProductItem {
+        /**
+          * Dados referentes a um produto específico.
+         */
+        "product"?: ProductItem;
+    }
+    interface TpElemProductList {
+        /**
+          * O ID da categoria de produtos a serem listadas. Se nenhuma categoria for definida, todos os produtos serão listados.
+         */
+        "categoryId"?: number | null;
+    }
+    interface TpElemProductSearch {
+        /**
+          * A variação de cor do componente.
+         */
+        "color"?: TpColor1;
+        /**
+          * A altura máxima do dropdown.
+         */
+        "maxDropdownHeight"?: number;
+        /**
+          * O path da página de busca.
+         */
+        "searchPageUrl"?: string;
+    }
+    interface TpElemRelatedProducts {
+        /**
+          * ID do produto
+         */
+        "productId"?: number;
+    }
     interface TpExample {
         "color"?: TpColor;
         "icon"?: string;
+    }
+    interface TpFontZoom {
+        /**
+          * todo
+         */
+        "emitter": { emit: (value: TpFontZoomSize) => void };
+        /**
+          * todo
+         */
+        "value"?: TpFontZoomSize;
+    }
+    interface TpGroupAnimation {
+        /**
+          * Define a animação dos componentes do grupo.
+         */
+        "animation"?: TpGroupAnimationType;
+        /**
+          * Define o delay do inicio das animações em milissegundos.
+         */
+        "delay"?: number;
+        /**
+          * Define a duração das animações de cada componente do grupo em milissegundos.
+         */
+        "duration"?: number;
+        /**
+          * Define a porcentagem da área de scroll que o componente deve atingir para dar inicio a sua animação.
+         */
+        "intersectionTrigger"?: number;
+        /**
+          * Define se a animação dos componentes será ativada pelo scroll, quando o componente estiver dentro da área de scroll.
+         */
+        "scrollTrigger"?: boolean;
+        /**
+          * Define o seletor html/css da área de scroll.
+         */
+        "scroller"?: string;
+        /**
+          * Define o tempo entre o inicio de animações sequenciais em milissegundos.
+         */
+        "stagger"?: number;
+    }
+    interface TpHeader {
+        /**
+          * todo
+         */
+        "onHeaderResize"?: (event: TpHeaderCustomEvent<headerResizeEventDetail>) => void;
+    }
+    interface TpHero {
     }
     interface TpHorizontalChartBar {
         /**
@@ -512,6 +1941,24 @@ declare namespace LocalJSX {
          */
         "value"?: number;
     }
+    interface TpImagesCarousel {
+        /**
+          * As proporções do carrossel no formato h / w (height to width).
+         */
+        "aspectRatio"?: number;
+        /**
+          * Os objetos com as imagens a serem mostradas no carrossel.
+         */
+        "images"?: CarouselImage[];
+        /**
+          * Se o carrossel terá ou não o recurso de thumbs.
+         */
+        "thumbs"?: boolean;
+        /**
+          * Se as images terão ou não o recurso de zoom.
+         */
+        "zoom"?: boolean;
+    }
     interface TpInputContainer {
         /**
           * Define a variação de cor do componente.
@@ -535,18 +1982,130 @@ declare namespace LocalJSX {
         "state"?: 'error' | 'success';
     }
     interface TpLoader {
+        "color"?: TpColor;
+        "fixed"?: boolean;
+        "size"?: 'full' | 'auto';
+        "type"?: 'secondary' | undefined;
+    }
+    interface TpNavbar {
         /**
-          * Define a variação de cor do componente.
+          * todo
          */
         "color"?: TpColor;
         /**
-          * Define a posição do componente.
+          * todo
          */
-        "fixed"?: boolean;
+        "name"?: 'secondary' | 'transparent';
+    }
+    interface TpOffline {
         /**
-          * Define a variação do componente.
+          * Define o title do componente
          */
-        "tpName"?: TpLoaderType['tp-name'];
+        "offlineText"?: string;
+        /**
+          * Define o title do componente
+         */
+        "offlineTitle"?: string;
+        /**
+          * todo
+         */
+        "onTpClick"?: (event: TpOfflineCustomEvent<void>) => void;
+    }
+    interface TpPagination {
+        /**
+          * A variação de cor dos botões do componente.
+         */
+        "color"?: TpColor;
+        /**
+          * Índice da página atual.
+         */
+        "currentPage"?: number;
+        /**
+          * Emitido quando há clique no botão de uma página específica.
+         */
+        "onTpNavigate"?: (event: TpPaginationCustomEvent<number>) => void;
+        /**
+          * Emitido quando há clique no botão de seguir para a próxima página.
+         */
+        "onTpNext"?: (event: TpPaginationCustomEvent<null>) => void;
+        /**
+          * Emitido quando há clique no botão que oculta páginas específicas, não mostradas nos botões do estado atual.
+         */
+        "onTpPageJump"?: (event: TpPaginationCustomEvent<TpPaginationDirection>) => void;
+        /**
+          * Emitido quando há clique no botão de seguir para a página anterior.
+         */
+        "onTpPrevious"?: (event: TpPaginationCustomEvent<null>) => void;
+        /**
+          * O número total de páginas.
+         */
+        "pageCount"?: number;
+        /**
+          * A variação de tamanho dos botões do componente.
+         */
+        "size"?: TpPaginationSize;
+    }
+    interface TpPlusminus {
+        /**
+          * true se deve desabilitar os controles automaticamente
+         */
+        "automaticDisabled"?: boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "disabled"?: 'minus' | 'plus' | 'both';
+        /**
+          * O valor máximo
+         */
+        "max"?: number;
+        /**
+          * O valor mínimo
+         */
+        "min"?: number;
+        /**
+          * todo
+         */
+        "onTpChange"?: (event: TpPlusminusCustomEvent<TpPlusMinusStatus>) => void;
+        /**
+          * todo
+         */
+        "onTpChangeAlt"?: (event: TpPlusminusCustomEvent<number>) => void;
+        /**
+          * todo
+         */
+        "size"?: 'xl';
+        /**
+          * Deverá ser true se o valor atual vai ser passado por slot, false se vai ser passado por prop
+         */
+        "useSlot"?: boolean;
+        /**
+          * O valor atual (apenas se useSlot é false)
+         */
+        "value"?: number;
+    }
+    interface TpQuestion {
+        /**
+          * todo
+         */
+        "collapsed"?: boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "texto"?: string;
+    }
+    interface TpRateBar {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
     }
     interface TpRateLike {
         /**
@@ -563,6 +2122,62 @@ declare namespace LocalJSX {
         "status"?: 'like' | 'dislike';
     }
     interface TpSegmentContainer {
+    }
+    interface TpThemes {
+        /**
+          * todo
+         */
+        "ativo"?: 'theme-gold' | 'theme-recursos' | string;
+        /**
+          * todo
+         */
+        "onTpChange"?: (event: TpThemesCustomEvent<string>) => void;
+        /**
+          * todo
+         */
+        "temas"?: TpTema[];
+    }
+    interface TpTiles {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "label"?: string;
+        /**
+          * todo
+         */
+        "selected"?: boolean;
+        /**
+          * todo
+         */
+        "solid"?: boolean;
+        /**
+          * todo
+         */
+        "titulo"?: string;
+    }
+    interface TpToggle {
+        /**
+          * todo
+         */
+        "collapsed"?: boolean;
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "iconClick"?: boolean;
+    }
+    interface TpToolbar {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
     }
     interface TpTooltip {
         /**
@@ -590,22 +2205,85 @@ declare namespace LocalJSX {
          */
         "position"?: 'start' | 'center' | 'end';
     }
+    interface TpVideoThumbnail {
+        /**
+          * todo
+         */
+        "color"?: TpColor;
+        /**
+          * todo
+         */
+        "size"?: TpVideoThumbnailSize;
+        /**
+          * todo
+         */
+        "url"?: string;
+        /**
+          * todo
+         */
+        "value"?: number;
+    }
     interface IntrinsicElements {
         "dialog-example": DialogExample;
         "modal-example": ModalExample;
         "sheet-example": SheetExample;
-        "tp-alert": TpAlert;
+        "snackbar-example": SnackbarExample;
+        "tp-add-card": TpAddCard;
+        "tp-alert-fixed": TpAlertFixed;
+        "tp-animation": TpAnimation;
+        "tp-autocomplete": TpAutocomplete;
+        "tp-banner": TpBanner;
+        "tp-base": TpBase;
         "tp-button-cluster": TpButtonCluster;
+        "tp-calendar": TpCalendar;
+        "tp-calendar-day": TpCalendarDay;
+        "tp-cartao-resposta-item": TpCartaoRespostaItem;
+        "tp-cartao-resposta-lista": TpCartaoRespostaLista;
         "tp-chart-bar": TpChartBar;
         "tp-chart-radial": TpChartRadial;
+        "tp-check-card": TpCheckCard;
         "tp-comparison-chart-bar": TpComparisonChartBar;
+        "tp-context-menu": TpContextMenu;
+        "tp-download-button": TpDownloadButton;
+        "tp-dropdown": TpDropdown;
+        "tp-elem-cart-button": TpElemCartButton;
+        "tp-elem-cart-item": TpElemCartItem;
+        "tp-elem-cart-list": TpElemCartList;
+        "tp-elem-news-content": TpElemNewsContent;
+        "tp-elem-news-hero": TpElemNewsHero;
+        "tp-elem-news-item": TpElemNewsItem;
+        "tp-elem-news-list": TpElemNewsList;
+        "tp-elem-news-search": TpElemNewsSearch;
+        "tp-elem-news-share": TpElemNewsShare;
+        "tp-elem-product-detail": TpElemProductDetail;
+        "tp-elem-product-info": TpElemProductInfo;
+        "tp-elem-product-item": TpElemProductItem;
+        "tp-elem-product-list": TpElemProductList;
+        "tp-elem-product-search": TpElemProductSearch;
+        "tp-elem-related-products": TpElemRelatedProducts;
         "tp-example": TpExample;
+        "tp-font-zoom": TpFontZoom;
+        "tp-group-animation": TpGroupAnimation;
+        "tp-header": TpHeader;
+        "tp-hero": TpHero;
         "tp-horizontal-chart-bar": TpHorizontalChartBar;
+        "tp-images-carousel": TpImagesCarousel;
         "tp-input-container": TpInputContainer;
         "tp-loader": TpLoader;
+        "tp-navbar": TpNavbar;
+        "tp-offline": TpOffline;
+        "tp-pagination": TpPagination;
+        "tp-plusminus": TpPlusminus;
+        "tp-question": TpQuestion;
+        "tp-rate-bar": TpRateBar;
         "tp-rate-like": TpRateLike;
         "tp-segment-container": TpSegmentContainer;
+        "tp-themes": TpThemes;
+        "tp-tiles": TpTiles;
+        "tp-toggle": TpToggle;
+        "tp-toolbar": TpToolbar;
         "tp-tooltip": TpTooltip;
+        "tp-video-thumbnail": TpVideoThumbnail;
     }
 }
 export { LocalJSX as JSX };
@@ -615,18 +2293,63 @@ declare module "@stencil/core" {
             "dialog-example": LocalJSX.DialogExample & JSXBase.HTMLAttributes<HTMLDialogExampleElement>;
             "modal-example": LocalJSX.ModalExample & JSXBase.HTMLAttributes<HTMLModalExampleElement>;
             "sheet-example": LocalJSX.SheetExample & JSXBase.HTMLAttributes<HTMLSheetExampleElement>;
-            "tp-alert": LocalJSX.TpAlert & JSXBase.HTMLAttributes<HTMLTpAlertElement>;
+            "snackbar-example": LocalJSX.SnackbarExample & JSXBase.HTMLAttributes<HTMLSnackbarExampleElement>;
+            "tp-add-card": LocalJSX.TpAddCard & JSXBase.HTMLAttributes<HTMLTpAddCardElement>;
+            "tp-alert-fixed": LocalJSX.TpAlertFixed & JSXBase.HTMLAttributes<HTMLTpAlertFixedElement>;
+            "tp-animation": LocalJSX.TpAnimation & JSXBase.HTMLAttributes<HTMLTpAnimationElement>;
+            "tp-autocomplete": LocalJSX.TpAutocomplete & JSXBase.HTMLAttributes<HTMLTpAutocompleteElement>;
+            "tp-banner": LocalJSX.TpBanner & JSXBase.HTMLAttributes<HTMLTpBannerElement>;
+            "tp-base": LocalJSX.TpBase & JSXBase.HTMLAttributes<HTMLTpBaseElement>;
             "tp-button-cluster": LocalJSX.TpButtonCluster & JSXBase.HTMLAttributes<HTMLTpButtonClusterElement>;
+            "tp-calendar": LocalJSX.TpCalendar & JSXBase.HTMLAttributes<HTMLTpCalendarElement>;
+            "tp-calendar-day": LocalJSX.TpCalendarDay & JSXBase.HTMLAttributes<HTMLTpCalendarDayElement>;
+            "tp-cartao-resposta-item": LocalJSX.TpCartaoRespostaItem & JSXBase.HTMLAttributes<HTMLTpCartaoRespostaItemElement>;
+            "tp-cartao-resposta-lista": LocalJSX.TpCartaoRespostaLista & JSXBase.HTMLAttributes<HTMLTpCartaoRespostaListaElement>;
             "tp-chart-bar": LocalJSX.TpChartBar & JSXBase.HTMLAttributes<HTMLTpChartBarElement>;
             "tp-chart-radial": LocalJSX.TpChartRadial & JSXBase.HTMLAttributes<HTMLTpChartRadialElement>;
+            "tp-check-card": LocalJSX.TpCheckCard & JSXBase.HTMLAttributes<HTMLTpCheckCardElement>;
             "tp-comparison-chart-bar": LocalJSX.TpComparisonChartBar & JSXBase.HTMLAttributes<HTMLTpComparisonChartBarElement>;
+            "tp-context-menu": LocalJSX.TpContextMenu & JSXBase.HTMLAttributes<HTMLTpContextMenuElement>;
+            "tp-download-button": LocalJSX.TpDownloadButton & JSXBase.HTMLAttributes<HTMLTpDownloadButtonElement>;
+            "tp-dropdown": LocalJSX.TpDropdown & JSXBase.HTMLAttributes<HTMLTpDropdownElement>;
+            "tp-elem-cart-button": LocalJSX.TpElemCartButton & JSXBase.HTMLAttributes<HTMLTpElemCartButtonElement>;
+            "tp-elem-cart-item": LocalJSX.TpElemCartItem & JSXBase.HTMLAttributes<HTMLTpElemCartItemElement>;
+            "tp-elem-cart-list": LocalJSX.TpElemCartList & JSXBase.HTMLAttributes<HTMLTpElemCartListElement>;
+            "tp-elem-news-content": LocalJSX.TpElemNewsContent & JSXBase.HTMLAttributes<HTMLTpElemNewsContentElement>;
+            "tp-elem-news-hero": LocalJSX.TpElemNewsHero & JSXBase.HTMLAttributes<HTMLTpElemNewsHeroElement>;
+            "tp-elem-news-item": LocalJSX.TpElemNewsItem & JSXBase.HTMLAttributes<HTMLTpElemNewsItemElement>;
+            "tp-elem-news-list": LocalJSX.TpElemNewsList & JSXBase.HTMLAttributes<HTMLTpElemNewsListElement>;
+            "tp-elem-news-search": LocalJSX.TpElemNewsSearch & JSXBase.HTMLAttributes<HTMLTpElemNewsSearchElement>;
+            "tp-elem-news-share": LocalJSX.TpElemNewsShare & JSXBase.HTMLAttributes<HTMLTpElemNewsShareElement>;
+            "tp-elem-product-detail": LocalJSX.TpElemProductDetail & JSXBase.HTMLAttributes<HTMLTpElemProductDetailElement>;
+            "tp-elem-product-info": LocalJSX.TpElemProductInfo & JSXBase.HTMLAttributes<HTMLTpElemProductInfoElement>;
+            "tp-elem-product-item": LocalJSX.TpElemProductItem & JSXBase.HTMLAttributes<HTMLTpElemProductItemElement>;
+            "tp-elem-product-list": LocalJSX.TpElemProductList & JSXBase.HTMLAttributes<HTMLTpElemProductListElement>;
+            "tp-elem-product-search": LocalJSX.TpElemProductSearch & JSXBase.HTMLAttributes<HTMLTpElemProductSearchElement>;
+            "tp-elem-related-products": LocalJSX.TpElemRelatedProducts & JSXBase.HTMLAttributes<HTMLTpElemRelatedProductsElement>;
             "tp-example": LocalJSX.TpExample & JSXBase.HTMLAttributes<HTMLTpExampleElement>;
+            "tp-font-zoom": LocalJSX.TpFontZoom & JSXBase.HTMLAttributes<HTMLTpFontZoomElement>;
+            "tp-group-animation": LocalJSX.TpGroupAnimation & JSXBase.HTMLAttributes<HTMLTpGroupAnimationElement>;
+            "tp-header": LocalJSX.TpHeader & JSXBase.HTMLAttributes<HTMLTpHeaderElement>;
+            "tp-hero": LocalJSX.TpHero & JSXBase.HTMLAttributes<HTMLTpHeroElement>;
             "tp-horizontal-chart-bar": LocalJSX.TpHorizontalChartBar & JSXBase.HTMLAttributes<HTMLTpHorizontalChartBarElement>;
+            "tp-images-carousel": LocalJSX.TpImagesCarousel & JSXBase.HTMLAttributes<HTMLTpImagesCarouselElement>;
             "tp-input-container": LocalJSX.TpInputContainer & JSXBase.HTMLAttributes<HTMLTpInputContainerElement>;
             "tp-loader": LocalJSX.TpLoader & JSXBase.HTMLAttributes<HTMLTpLoaderElement>;
+            "tp-navbar": LocalJSX.TpNavbar & JSXBase.HTMLAttributes<HTMLTpNavbarElement>;
+            "tp-offline": LocalJSX.TpOffline & JSXBase.HTMLAttributes<HTMLTpOfflineElement>;
+            "tp-pagination": LocalJSX.TpPagination & JSXBase.HTMLAttributes<HTMLTpPaginationElement>;
+            "tp-plusminus": LocalJSX.TpPlusminus & JSXBase.HTMLAttributes<HTMLTpPlusminusElement>;
+            "tp-question": LocalJSX.TpQuestion & JSXBase.HTMLAttributes<HTMLTpQuestionElement>;
+            "tp-rate-bar": LocalJSX.TpRateBar & JSXBase.HTMLAttributes<HTMLTpRateBarElement>;
             "tp-rate-like": LocalJSX.TpRateLike & JSXBase.HTMLAttributes<HTMLTpRateLikeElement>;
             "tp-segment-container": LocalJSX.TpSegmentContainer & JSXBase.HTMLAttributes<HTMLTpSegmentContainerElement>;
+            "tp-themes": LocalJSX.TpThemes & JSXBase.HTMLAttributes<HTMLTpThemesElement>;
+            "tp-tiles": LocalJSX.TpTiles & JSXBase.HTMLAttributes<HTMLTpTilesElement>;
+            "tp-toggle": LocalJSX.TpToggle & JSXBase.HTMLAttributes<HTMLTpToggleElement>;
+            "tp-toolbar": LocalJSX.TpToolbar & JSXBase.HTMLAttributes<HTMLTpToolbarElement>;
             "tp-tooltip": LocalJSX.TpTooltip & JSXBase.HTMLAttributes<HTMLTpTooltipElement>;
+            "tp-video-thumbnail": LocalJSX.TpVideoThumbnail & JSXBase.HTMLAttributes<HTMLTpVideoThumbnailElement>;
         }
     }
 }

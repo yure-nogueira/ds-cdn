@@ -1,0 +1,2 @@
+const t={ASSETS_BASE_PATH:"./assets"};const s={ASSETS_BASE_PATH:"/wp-content/plugins/templarios-institucional/web-components/assets"};const e={ASSETS_BASE_PATH:"./assets"};const n=o();function o(){switch("production"){case"development":return t;case"production":return e;case"production:elementor":return s;default:return t}}export{n as C,t as D,s as P,e as a};
+//# sourceMappingURL=p-3b6c28c6.js.map

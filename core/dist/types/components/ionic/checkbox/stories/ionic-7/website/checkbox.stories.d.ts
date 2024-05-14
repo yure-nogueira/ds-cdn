@@ -1,0 +1,10 @@
+import { Components } from '@ionic/core';
+import type { Meta, StoryObj } from '@storybook/web-components';
+import { TpIonText } from '../../../../../../components/ionic/text/utils/text.type';
+import { TpIonCheckbox } from '../../../utils/checkbox.type';
+declare const meta: Meta<Components.IonCheckbox & Components.IonText & TpIonCheckbox & TpIonText>;
+export default meta;
+type Story = StoryObj<Components.IonCheckbox & Components.IonText & TpIonCheckbox & TpIonText>;
+export declare const DefaultMarkup: Story;
+export declare const TextMarkup: Story;
+export declare const ColorsMarkup: Story;

@@ -23,24 +23,16 @@ const meta = {
             options: [...TP_ION_BACK_BUTTON['tp-size']],
             description: 'Define o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_BACK_BUTTON['tp-size'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_BACK_BUTTON['tp-size'].join('|') },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: false,
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: false },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -61,9 +53,5 @@ export const Default = {
     </ion-back-button>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-back-button/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=back-button.stories.js.map

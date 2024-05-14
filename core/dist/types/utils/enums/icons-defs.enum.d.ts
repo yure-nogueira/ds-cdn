@@ -16,7 +16,9 @@ export declare enum TpSymbolDefsIcons {
     TpMedcursoIcon = "tp-medcurso-icon",
     TpRevalidacaoIcon = "tp-revalidacao-icon",
     TpMedfocoIcon = "tp-medfoco-icon",
-    TpMedatbIcon = "tp-medatb-icon"
+    TpMedatbIcon = "tp-medatb-icon",
+    TpTedIcon = "tp-ted-icon",
+    TpTegoIcon = "tp-tego-icon"
 }
 export declare enum TpSymbolDefsLogos {
     TpBymed = "tp-bymed",

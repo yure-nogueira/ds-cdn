@@ -1,0 +1,1 @@
+{"version":3,"file":"responses.interface.js","sourceRoot":"","sources":["../../../../../../src/utils/api/institucional/utils/interfaces/responses.interface.ts"],"names":[],"mappings":"","sourcesContent":["export interface ApiResponse {\r\n  data: any;\r\n}\r\n"]}

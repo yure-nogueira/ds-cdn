@@ -1,0 +1,34 @@
+:host {
+  --tp-background: var(--tp-color-neutral-2);
+  --tp-center-width: auto;
+  --tp-center-margin: 0 16px;
+  --tp-justify-content: space-between;
+  padding: 8px 16px;
+  background: var(--tp-background);
+  min-height: 48px;
+  height: auto;
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.tp-toolbar__container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: var(--tp-justify-content);
+}
+.tp-toolbar__center {
+  margin: var(--tp-center-margin);
+  width: var(--tp-center-width);
+}
+
+:host(.tp-color.tp-toolbar) {
+  --tp-background: var(--tp-color-base);
+}
+
+:host(.tp-color.tp-toolbar) ::slotted(ion-button) {
+  color: var(--tp-color-contrast) !important;
+}

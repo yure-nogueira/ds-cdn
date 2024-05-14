@@ -1,0 +1,83 @@
+:host {
+  --tp-background: var(--tp-color-neutral-3);
+  --tp-color: var(--tp-color-neutral-10);
+  --tp-z-index: 1;
+}
+
+:host(.tp-context-menu) {
+  display: block;
+  position: relative;
+}
+:host(.tp-context-menu) .tp-context-menu__content {
+  z-index: var(--tp-z-index);
+  position: absolute;
+  background: var(--tp-background);
+  right: -8px;
+  top: -8px;
+  width: 264px;
+  max-width: 264px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.14), 0 4px 5px rgba(0, 0, 0, 0.12), 0 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  visibility: visible;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+:host(.tp-context-menu) .tp-context-menu__top {
+  display: flex;
+}
+:host(.tp-context-menu) .tp-context-menu__button {
+  --font-size: 24px;
+}
+:host(.tp-context-menu) .tp-context-menu__icon {
+  margin-right: 0;
+}
+:host(.tp-context-menu) .tp-context-menu__inner-button {
+  --font-size: 24px;
+  position: absolute;
+  right: 8px;
+  top: 9px;
+}
+:host(.tp-context-menu) .tp-context-menu__inner-icon {
+  stroke: var(--tp-color-neutral-10);
+  font-size: 24px;
+}
+:host(.tp-context-menu) ::slotted(ion-item) {
+  --background: var(--tp-color-neutral-3);
+}
+:host(.tp-context-menu) ::slotted(*[slot=item]):not(:last-child) {
+  margin-bottom: 16px;
+}
+:host(.tp-context-menu) ::slotted(*[slot=info]) {
+  display: block;
+  text-align: center;
+  margin-top: 16px;
+}
+
+:host(.tp-context-menu--collapsed) .tp-context-menu__content {
+  --tp-z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+}
+
+:host(.tp-color) {
+  --tp-background: var(--tp-color-base);
+}
+:host(.tp-color) .tp-context-menu__button {
+  color: var(--tp-color-base);
+}
+:host(.tp-color) .tp-context-menu__inner-button {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) ::slotted(ion-item) {
+  --background: var(--tp-color-base);
+}
+:host(.tp-color) ::slotted(ion-item) ion-icon {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) ::slotted(ion-item) ion-text {
+  color: var(--tp-color-contrast);
+}
+:host(.tp-color) ::slotted(ion-text) {
+  color: var(--tp-color-contrast);
+}

@@ -1,0 +1,26 @@
+:host {
+  --tp-spacing: 8px 16px;
+  --tp-background: var(--tp-color-neutral-2);
+  --tp-font-size: 16px;
+  --tp-font-weight: 600;
+  --tp-line-height: 100%;
+  --tp-color: var(--tp-color-neutral-10);
+  padding: var(--tp-spacing);
+  background: var(--tp-background);
+  font-size: var(--tp-font-size);
+  font-weight: var(--tp-font-weight);
+  line-height: var(--tp-line-height);
+  color: var(--tp-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+:host(.tp-color) {
+  --tp-background: var(--tp-color-base);
+  --tp-color: var(--tp-color-contrast);
+}
+
+:host(.tp-color) ::slotted(tp-rate-like) {
+  --tp-color-rate-like: var(--tp-color-contrast);
+}

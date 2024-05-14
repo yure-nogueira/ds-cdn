@@ -18,6 +18,8 @@ export var TpSymbolDefsIcons;
     TpSymbolDefsIcons["TpRevalidacaoIcon"] = "tp-revalidacao-icon";
     TpSymbolDefsIcons["TpMedfocoIcon"] = "tp-medfoco-icon";
     TpSymbolDefsIcons["TpMedatbIcon"] = "tp-medatb-icon";
+    TpSymbolDefsIcons["TpTedIcon"] = "tp-ted-icon";
+    TpSymbolDefsIcons["TpTegoIcon"] = "tp-tego-icon";
 })(TpSymbolDefsIcons || (TpSymbolDefsIcons = {}));
 export var TpSymbolDefsLogos;
 (function (TpSymbolDefsLogos) {

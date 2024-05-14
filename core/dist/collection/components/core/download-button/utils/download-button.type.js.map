@@ -1,0 +1,1 @@
+{"version":3,"file":"download-button.type.js","sourceRoot":"","sources":["../../../../../src/components/core/download-button/utils/download-button.type.ts"],"names":[],"mappings":"","sourcesContent":["import { TpDownloadButtonSizesEnum } from './download-button.enum';\r\n\r\nexport type TpDownloadButtonSizes = `${TpDownloadButtonSizesEnum}`;\r\n"]}

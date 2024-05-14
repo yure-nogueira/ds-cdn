@@ -1,0 +1,64 @@
+.cart-item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.cart-item__image-container {
+  display: flex;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+@media (max-width: 767.98px) {
+  .cart-item__image-container {
+    width: 150px;
+  }
+}
+@media (max-width: 575.98px) {
+  .cart-item__image-container {
+    width: 100px;
+  }
+}
+.cart-item__middle {
+  flex: 1;
+}
+.cart-item__price-container {
+  display: flex;
+  gap: 4px;
+}
+.cart-item__right {
+  text-align: end;
+}
+
+::slotted([slot=image]) {
+  display: flex;
+}
+
+::slotted([slot=title]) {
+  display: block;
+  margin-bottom: 8px;
+}
+
+::slotted([slot=regular-price]) {
+  margin-right: 8px;
+  text-decoration: line-through;
+}
+
+::slotted([slot=save]) {
+  display: block;
+  margin-bottom: 8px;
+}
+
+::slotted([slot=short-description]) {
+  display: block;
+  margin-bottom: 16px;
+}
+
+::slotted([slot=plusminus]) {
+  justify-content: flex-start !important;
+  margin-bottom: 4px;
+}
+
+::slotted([slot=item-total]) {
+  display: block;
+}

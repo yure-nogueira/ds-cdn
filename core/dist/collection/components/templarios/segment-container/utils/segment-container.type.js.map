@@ -1,1 +1,0 @@
-{"version":3,"file":"segment-container.type.js","sourceRoot":"","sources":["../../../../../src/components/templarios/segment-container/utils/segment-container.type.ts"],"names":[],"mappings":"","sourcesContent":["import { TpSegmentContainerGradient } from './segment-container.enum';\n\nexport type TpSegmentContainerType = {\n  position: `${TpSegmentContainerGradient}`;\n};\n"]}

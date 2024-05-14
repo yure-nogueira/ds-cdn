@@ -1,0 +1,1 @@
+{"version":3,"file":"download-button.enum.js","sourceRoot":"","sources":["../../../../../src/components/core/download-button/utils/download-button.enum.ts"],"names":[],"mappings":"AAAA,MAAM,CAAN,IAAY,yBAEX;AAFD,WAAY,yBAAyB;IACnC,sCAAS,CAAA;AACX,CAAC,EAFW,yBAAyB,KAAzB,yBAAyB,QAEpC","sourcesContent":["export enum TpDownloadButtonSizesEnum {\r\n  LG = 'lg',\r\n}\r\n"]}

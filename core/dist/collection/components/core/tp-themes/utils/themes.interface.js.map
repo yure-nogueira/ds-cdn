@@ -1,0 +1,1 @@
+{"version":3,"file":"themes.interface.js","sourceRoot":"","sources":["../../../../../src/components/core/tp-themes/utils/themes.interface.ts"],"names":[],"mappings":"","sourcesContent":["export interface TpTema {\r\n  value?: string;\r\n  label?: string;\r\n  cssClass?: string;\r\n}\r\n"]}

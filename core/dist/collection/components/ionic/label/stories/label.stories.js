@@ -22,12 +22,8 @@ const meta = {
             options: [...TP_TYPE],
             description: 'Define a estilização do texto do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_TYPE.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_TYPE.join('|') },
             },
         },
     },
@@ -36,13 +32,11 @@ export default meta;
 export const Default = {
     render: (_a) => {
         var args = __rest(_a, []);
-        return html `<ion-label color="${args.color}" tp-type="${args['tp-type']}"
-      >Lorem ipsum, dolor sit amet consectetur.</ion-label
-    >`;
+        return html `
+    <ion-label color="${args.color}" tp-type="${args['tp-type']}">
+      Lorem ipsum, dolor sit amet consectetur.
+    </ion-label>
+  `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-label/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=label.stories.js.map

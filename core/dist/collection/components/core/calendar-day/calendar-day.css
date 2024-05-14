@@ -1,0 +1,66 @@
+/**
+ * --tp-active-color: Define a cor do texto no estado ativo.
+ * --tp-active-background: Define a cor do background no estado ativo.
+ */
+.tp-calendar-day__date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  cursor: pointer;
+}
+.tp-calendar-day__container {
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.tp-calendar-day__container:hover {
+  background: var(--tp-color-neutral-3);
+}
+.tp-calendar-day__text {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 12px;
+}
+.tp-calendar-day__checked-icon {
+  display: none;
+  width: 16px;
+  height: 16px;
+}
+
+:host(.tp-calendar-day--active) .tp-calendar-day__container {
+  background: var(--tp-active-background, var(--tp-color-brand-3));
+  color: var(--tp-active-color);
+}
+
+:host(.tp-calendar-day--outlined) .tp-calendar-day__container {
+  border: 1px solid var(--tp-color-warning);
+}
+
+:host(.tp-calendar-day--checked) .tp-calendar-day__container {
+  border: 1px solid var(--tp-color-neutral-3);
+}
+
+:host(.tp-calendar-day--checked) .tp-calendar-day__text {
+  display: none;
+}
+
+:host(.tp-calendar-day--checked) .tp-calendar-day__checked-icon {
+  display: block;
+}
+
+:host(.tp-calendar-day--disabled) {
+  color: var(--tp-color-neutral-4);
+}
+
+:host(.tp-calendar-day--disabled:hover) .tp-calendar-day__container {
+  background: transparent;
+}
+
+:host(.tp-calendar-day--disabled:hover) .tp-calendar-day__date {
+  cursor: initial;
+}

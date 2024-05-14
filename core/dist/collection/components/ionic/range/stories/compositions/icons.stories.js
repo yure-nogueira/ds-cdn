@@ -22,60 +22,40 @@ const meta = {
             control: { type: 'boolean' },
             description: 'Define a variação do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'Secondary',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'Secondary' },
             },
         },
         ticks: {
             control: 'boolean',
             description: 'Define se o componente terá ticks em sua extensão.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         snaps: {
             control: 'boolean',
             description: 'Se ticks for ativado este atributo deve ser juntamente ativado.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         min: {
             control: 'number',
             description: 'Define o valor inteiro mínimo do intervalo de ticks.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'number',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'number' },
             },
         },
         max: {
             control: 'number',
             description: 'Define o valor inteiro máximo do intervalo de ticks.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'number',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'number' },
             },
         },
     },
@@ -104,9 +84,5 @@ export const Icons = {
     </ion-range>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-range/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=icons.stories.js.map

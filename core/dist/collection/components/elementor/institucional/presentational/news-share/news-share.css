@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+::slotted([slot=text]) {
+  display: block;
+  margin-bottom: 16px;
+}
+
+::slotted([slot=links]) {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+::slotted([slot=links]) a {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"rate-like.type.js","sourceRoot":"","sources":["../../../../../src/components/core/rate-like/utils/rate-like.type.ts"],"names":[],"mappings":"","sourcesContent":["import { TpRateLikeStatus } from './rate-like.enum';\r\n\r\nexport type TpRateLikeType = {\r\n  status: `${TpRateLikeStatus}`;\r\n};\r\n"]}

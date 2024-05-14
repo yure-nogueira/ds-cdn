@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.tp-pagination__item {
+  --border-radius: 4px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+.tp-pagination__item:not(:first-child) {
+  margin-left: 0.8rem;
+}

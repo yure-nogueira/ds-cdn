@@ -24,36 +24,24 @@ const meta = {
             options: [...TP_ION_BUTTON.clear.size],
             description: 'Define o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_BUTTON.clear.size.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_BUTTON.clear.size.join('|') },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
         'tp-no-padding': {
             control: 'boolean',
             description: 'Remove o padding lateral do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -96,9 +84,5 @@ export const Clear = {
     </ion-button>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-badge/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=button.clear.stories.js.map

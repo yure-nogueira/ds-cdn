@@ -12,8 +12,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { defineCustomElement as defineCustomElementIcon } from "@ionic/core/components/ion-icon";
 import { defineCustomElement as defineCustomElementLabel } from "@ionic/core/components/ion-label";
-import { defineCustomElement as defineCustomElementTabBar, } from "@ionic/core/components/ion-tab-bar";
-import { defineCustomElement as defineCustomElementTabButton, } from "@ionic/core/components/ion-tab-button";
+import { defineCustomElement as defineCustomElementTabBar } from "@ionic/core/components/ion-tab-bar";
+import { defineCustomElement as defineCustomElementTabButton } from "@ionic/core/components/ion-tab-button";
 import { defineCustomElement as defineCustomElementTabs } from "@ionic/core/components/ion-tabs";
 import { html } from "lit";
 defineCustomElementTabs();
@@ -28,12 +28,8 @@ const meta = {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: false,
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: false },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -89,9 +85,5 @@ export const Default = {
     </ion-tabs>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-tab-bar/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=tab-bar.stories.js.map

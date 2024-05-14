@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  overflow: hidden;
+}
+
+.banner__container {
+  display: flex;
+  position: relative;
+}
+.banner__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.banner__content ::slotted([slot=content]) {
+  height: 100%;
+}
+.banner ::slotted([slot=image]) {
+  display: flex;
+  width: 100%;
+  transition: 500ms transform ease-in-out;
+  transform: scale(1.15);
+}
+.banner ::slotted([slot=image]) img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.banner ::slotted([slot=image][news-hero]) {
+  min-height: 400px;
+}
+@media (max-width: 991.98px) {
+  .banner ::slotted([slot=image][news-hero]) {
+    min-height: 320px;
+  }
+}
+@media (max-width: 767.98px) {
+  .banner ::slotted([slot=image][news-hero]) {
+    min-height: 280px;
+  }
+}
+
+:host(.banner--align-center) .banner__content {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+:host(.banner--align-right) .banner__content {
+  left: unset;
+  right: 0;
+}
+
+:host(.banner--animated) ::slotted([slot=image]) {
+  transform: scale(1);
+  transition: 5s transform cubic-bezier(0.165, 0.84, 0.44, 1);
+}

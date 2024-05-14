@@ -1,0 +1,53 @@
+:host {
+  --tp-color: var(--tp-color-neutral-10);
+  --tp-pointer-events: initial;
+}
+
+:host(.tp-plusminus) {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var(--tp-color);
+  max-height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:host(.tp-plusminus) .tp-plusminus__icon {
+  cursor: pointer;
+  stroke: var(--tp-color);
+  width: 24px;
+  height: 24px;
+}
+:host(.tp-plusminus) .tp-plusminus__icon--minus {
+  margin-right: 16px;
+}
+:host(.tp-plusminus) .tp-plusminus__icon--plus {
+  margin-left: 16px;
+}
+
+:host(.tp-plusminus--disabled-minus) .tp-plusminus__icon--minus,
+:host(.tp-plusminus--disabled-plus) .tp-plusminus__icon--plus {
+  opacity: 0.5;
+  pointer-events: var(--tp-pointer-events);
+}
+
+:host(.tp-plusminus--disabled-both) .tp-plusminus__icon--minus,
+:host(.tp-plusminus--disabled-both) .tp-plusminus__icon--plus {
+  opacity: 0.5;
+  pointer-events: var(--tp-pointer-events);
+}
+
+:host(.tp-plusminus--xl) {
+  font-size: 48px;
+}
+:host(.tp-plusminus--xl) .tp-plusminus__icon {
+  width: 48px;
+  height: 48px;
+}
+
+:host(.tp-color) {
+  --tp-color: var(--tp-color-base);
+  stroke: var(--tp-color-base);
+}

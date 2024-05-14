@@ -20,6 +20,7 @@ export var TpIonButtonIconSize;
     TpIonButtonIconSize["XS"] = "xs";
     TpIonButtonIconSize["S"] = "s";
     TpIonButtonIconSize["SM"] = "sm";
+    TpIonButtonIconSize["MD"] = "md";
     TpIonButtonIconSize["LG"] = "lg";
 })(TpIonButtonIconSize || (TpIonButtonIconSize = {}));
 //# sourceMappingURL=button.enum.js.map

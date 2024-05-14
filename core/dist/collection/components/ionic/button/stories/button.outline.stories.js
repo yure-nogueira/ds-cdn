@@ -24,24 +24,16 @@ const meta = {
             options: [...TP_ION_BUTTON.solid.size],
             description: 'Define o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_BUTTON.outline.size.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_BUTTON.outline.size.join('|') },
             },
         },
         disabled: {
             control: 'boolean',
             description: 'Define a estilização do estado disabled do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: 'boolean',
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: 'boolean' },
             },
         },
     },
@@ -81,9 +73,5 @@ export const Outline = {
     </ion-button>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-badge/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=button.outline.stories.js.map

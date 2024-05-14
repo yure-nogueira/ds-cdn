@@ -28,17 +28,14 @@ const meta = {
             options: [...TP_ION_ICON['tp-size']],
             description: 'Define o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_ICON['tp-size'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_ICON['tp-size'].join('|') },
             },
         },
     },
     args: {
         src: `${TP_ICONS_STORYBOOK[0]}`,
+        color: 'neutral-10',
     },
 };
 export default meta;
@@ -46,15 +43,13 @@ export const Icons = {
     render: (_a) => {
         var args = __rest(_a, []);
         const iconUrl = `./assets/${args.src}`;
-        return html `<ion-icon
-      color="${args.color}"
-      tp-size="${args['tp-size']}"
-      src="${iconUrl}"
-    ></ion-icon>`;
+        return html `
+      <ion-icon
+        color="${args.color}"
+        tp-size="${args['tp-size']}"
+        src="${iconUrl}"
+      ></ion-icon>
+    `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-icon/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=icon.stories.js.map

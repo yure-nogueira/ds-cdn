@@ -1,0 +1,1 @@
+{"version":3,"file":"product-list.type.js","sourceRoot":"","sources":["../../../../../../../src/components/elementor/ecommerce/feature/product-list/utils/product-list.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../../../utils/types/color.type';\r\n\r\nexport type TpElemProductList = {\r\n  color: `${TpColor}`;\r\n};\r\n"]}

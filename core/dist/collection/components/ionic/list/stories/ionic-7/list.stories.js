@@ -11,7 +11,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { defineCustomElement as defineCustomElementIcon } from "@ionic/core/components/ion-icon";
-import { defineCustomElement as defineCustomElementItem, } from "@ionic/core/components/ion-item";
+import { defineCustomElement as defineCustomElementItem } from "@ionic/core/components/ion-item";
 import { defineCustomElement as defineCustomElementLabel } from "@ionic/core/components/ion-label";
 import { defineCustomElement as defineCustomElementList } from "@ionic/core/components/ion-list";
 import { html } from "lit";
@@ -28,12 +28,8 @@ const meta = {
             options: [...TP_ION_LIST.lines],
             description: 'Define uma borda no bottom do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_LIST.lines.join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_LIST.lines.join('|') },
             },
         },
     },
@@ -66,9 +62,5 @@ export const Default = {
     </ion-list>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-list/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=list.stories.js.map

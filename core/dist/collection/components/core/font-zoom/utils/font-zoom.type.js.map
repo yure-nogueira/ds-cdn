@@ -1,0 +1,1 @@
+{"version":3,"file":"font-zoom.type.js","sourceRoot":"","sources":["../../../../../src/components/core/font-zoom/utils/font-zoom.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\r\n\r\nexport type TpFontZoomType = {\r\n  'tp-color': `${TpColor}`;\r\n  color: boolean;\r\n};\r\n"]}

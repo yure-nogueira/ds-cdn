@@ -16,5 +16,6 @@ export declare enum TpIonButtonIconSize {
     XS = "xs",
     S = "s",
     SM = "sm",
+    MD = "md",
     LG = "lg"
 }

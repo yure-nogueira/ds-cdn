@@ -30,9 +30,7 @@ const meta = {
 
 **OBS**: A cor **'${TpColorOrange.Orange}'** está disponivel apenas no theme **Recursos**.`,
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
+                defaultValue: { summary: 'undefined' },
                 type: {
                     summary: [
                         ...TP_COLORS,
@@ -47,12 +45,8 @@ const meta = {
             options: [...TP_ION_AVATAR['tp-size']],
             description: 'Define  o tamanho do componente.',
             table: {
-                defaultValue: {
-                    summary: 'undefined',
-                },
-                type: {
-                    summary: TP_ION_AVATAR['tp-size'].join('|'),
-                },
+                defaultValue: { summary: 'undefined' },
+                type: { summary: TP_ION_AVATAR['tp-size'].join('|') },
             },
         },
         color: { table: { disable: true } },
@@ -68,9 +62,5 @@ export const Default = {
     </ion-avatar>
   `;
     },
-    /* play: async ({ canvasElement }) => {
-      const canvas = within(canvasElement);
-      expect(canvas.getByText(/ion-avatar/gi)).toBeTruthy();
-    }, */
 };
 //# sourceMappingURL=avatar.stories.js.map
