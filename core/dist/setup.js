@@ -1,4 +1,6 @@
- import * as all from './esm/loader.js';
+import { defineCustomElements } from './esm/loader.js';
 
 alert('teste alert');
-console.log('define custom elements', all);
+console.log('define custom elements', defineCustomElements);
+
+defineCustomElements();
