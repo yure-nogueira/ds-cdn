@@ -1,0 +1,1 @@
+{"version":3,"file":"icon.type.js","sourceRoot":"","sources":["../../../src/utils/types/icon.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpIconA } from '../enums/icon.enum';\n\nexport type TpIcons = `${TpIconA}`;\n"]}

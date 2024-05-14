@@ -1,0 +1,1 @@
+{"version":3,"file":"list.enum.js","sourceRoot":"","sources":["../../../../../src/components/ionic/list/utils/list.enum.ts"],"names":[],"mappings":"AAAA,MAAM,CAAN,IAAY,cAEX;AAFD,WAAY,cAAc;IACxB,+BAAa,CAAA;AACf,CAAC,EAFW,cAAc,KAAd,cAAc,QAEzB","sourcesContent":["export enum TpIonListLines {\n  Full = 'full',\n}\n"]}

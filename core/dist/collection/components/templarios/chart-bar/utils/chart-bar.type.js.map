@@ -1,0 +1,1 @@
+{"version":3,"file":"chart-bar.type.js","sourceRoot":"","sources":["../../../../../src/components/templarios/chart-bar/utils/chart-bar.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\n\nexport type TpChartBar = {\n  color: `${TpColor}`;\n  value: number;\n  width: number;\n  height: number;\n};\n"]}

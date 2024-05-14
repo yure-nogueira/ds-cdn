@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/**
+  * @prop --tp-progress-percentage: Propriedade definida dinamicamente no tsx. Define o progresso de um barra circular.
+  * @prop --tp-size: Define o tamanho do componente.
+  * @prop --tp-title-font-size: Define o font-size do título do componente.
+  * @prop --tp-title-line-height: Define o line-height do título do componente.
+  * @prop --tp-subtitle-font-size: Define o font-size do subtítulo do componente.
+  * @prop --tp-subtitle-line-height: Define o line-height do subtítulo do componente.
+*/
+:host {
+  position: relative;
+  display: flex;
+  width: var(--tp-size, 56px);
+  height: var(--tp-size, 56px);
+}
+
+.tp-chart-radial__container {
+  width: var(--tp-size, 56px);
+  height: var(--tp-size, 56px);
+}
+.tp-chart-radial__track, .tp-chart-radial__progress {
+  transform: rotate(-90deg);
+  transform-origin: 18px 18px;
+  transition: 1s ease-in-out;
+  fill: none;
+  stroke-dashoffset: 0;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.tp-chart-radial__track {
+  stroke: var(--tp-color-neutral-2);
+}
+.tp-chart-radial__progress {
+  stroke-dasharray: var(--tp-progress-percentage) 100;
+}
+.tp-chart-radial__text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.tp-chart-radial__text-container ::slotted(ion-label[slot=title]) {
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 16px !important;
+}
+.tp-chart-radial__text-container ::slotted(ion-label[slot=subtitle]) {
+  display: none;
+  font-weight: 400 !important;
+}
+
+:host(.tp-color) .tp-chart-radial__track {
+  stroke: var(--tp-color-base);
+}
+
+:host(.tp-chart-radial--xs) {
+  --tp-size: 48px;
+  --tp-title-font-size: 12px;
+  --tp-title-line-height: 12px;
+}
+
+:host(.tp-chart-radial--xs) .tp-chart-radial__text-container ::slotted(ion-label[slot=title]) {
+  font-size: var(--tp-title-font-size) !important;
+  line-height: var(--tp-title-line-height) !important;
+}
+:host(.tp-chart-radial--xs) .tp-chart-radial__text-container ::slotted(ion-label[slot=subtitle]) {
+  font-size: var(--tp-subtitle-font-size) !important;
+  line-height: var(--tp-subtitle-line-height) !important;
+  display: none;
+}
+
+:host(.tp-chart-radial--sm) {
+  --tp-size: 56px;
+  --tp-title-font-size: 14px;
+  --tp-title-line-height: 16px;
+}
+
+:host(.tp-chart-radial--sm) .tp-chart-radial__text-container ::slotted(ion-label[slot=title]) {
+  font-size: var(--tp-title-font-size) !important;
+  line-height: var(--tp-title-line-height) !important;
+}
+:host(.tp-chart-radial--sm) .tp-chart-radial__text-container ::slotted(ion-label[slot=subtitle]) {
+  font-size: var(--tp-subtitle-font-size) !important;
+  line-height: var(--tp-subtitle-line-height) !important;
+  display: none;
+}
+
+:host(.tp-chart-radial--md) {
+  --tp-size: 80px;
+  --tp-title-font-size: 16px;
+  --tp-title-line-height: 16px;
+  --tp-subtitle-font-size: 10px;
+  --tp-subtitle-line-height: 12px;
+}
+
+:host(.tp-chart-radial--md) .tp-chart-radial__text-container ::slotted(ion-label[slot=title]) {
+  font-size: var(--tp-title-font-size) !important;
+  line-height: var(--tp-title-line-height) !important;
+}
+:host(.tp-chart-radial--md) .tp-chart-radial__text-container ::slotted(ion-label[slot=subtitle]) {
+  font-size: var(--tp-subtitle-font-size) !important;
+  line-height: var(--tp-subtitle-line-height) !important;
+  display: initial;
+}
+
+:host(.tp-chart-radial--lg) {
+  --tp-size: 108px;
+  --tp-title-font-size: 20px;
+  --tp-title-line-height: 20px;
+  --tp-subtitle-font-size: 12px;
+  --tp-subtitle-line-height: 12px;
+}
+
+:host(.tp-chart-radial--lg) .tp-chart-radial__text-container ::slotted(ion-label[slot=title]) {
+  font-size: var(--tp-title-font-size) !important;
+  line-height: var(--tp-title-line-height) !important;
+}
+:host(.tp-chart-radial--lg) .tp-chart-radial__text-container ::slotted(ion-label[slot=subtitle]) {
+  font-size: var(--tp-subtitle-font-size) !important;
+  line-height: var(--tp-subtitle-line-height) !important;
+  display: initial;
+}

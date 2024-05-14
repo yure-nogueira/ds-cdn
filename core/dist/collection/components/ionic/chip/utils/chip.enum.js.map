@@ -1,0 +1,1 @@
+{"version":3,"file":"chip.enum.js","sourceRoot":"","sources":["../../../../../src/components/ionic/chip/utils/chip.enum.ts"],"names":[],"mappings":"AAAA,MAAM,CAAN,IAAY,aAEX;AAFD,WAAY,aAAa;IACvB,0BAAS,CAAA;AACX,CAAC,EAFW,aAAa,KAAb,aAAa,QAExB","sourcesContent":["export enum TpIonChipSize {\n  LG = 'lg',\n}\n"]}

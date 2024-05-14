@@ -1,0 +1,30 @@
+export var TpType;
+(function (TpType) {
+    TpType["H64"] = "h64";
+    TpType["H48"] = "h48";
+    TpType["H48X"] = "h48x";
+    TpType["H32"] = "h32";
+    TpType["H32X"] = "h32x";
+    TpType["H24"] = "h24";
+    TpType["H24X"] = "h24x";
+    TpType["H20"] = "h20";
+    TpType["H20X"] = "h20x";
+    TpType["P20"] = "p20";
+    TpType["P18X"] = "p18x";
+    TpType["P18XB"] = "p18xb";
+    TpType["P16"] = "p16";
+    TpType["P16B"] = "p16b";
+    TpType["P16X"] = "p16x";
+    TpType["P16XB"] = "p16xb";
+    TpType["P14"] = "p14";
+    TpType["P14B"] = "p14b";
+    TpType["P14X"] = "p14x";
+    TpType["P14XB"] = "p14xb";
+    TpType["P12"] = "p12";
+    TpType["P12B"] = "p12b";
+    TpType["P12X"] = "p12x";
+    TpType["P12XB"] = "p12xb";
+    TpType["P10"] = "p10";
+    TpType["P10B"] = "p10b";
+})(TpType || (TpType = {}));
+//# sourceMappingURL=type.enum.js.map

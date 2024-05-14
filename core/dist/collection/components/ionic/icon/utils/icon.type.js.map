@@ -1,0 +1,1 @@
+{"version":3,"file":"icon.type.js","sourceRoot":"","sources":["../../../../../src/components/ionic/icon/utils/icon.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\nimport type { TpIonIconSize } from './icon.enum';\n\nexport type TpIonIcon = {\n  color: `${TpColor}`;\n  'tp-size': `${TpIonIconSize}`;\n};\n"]}

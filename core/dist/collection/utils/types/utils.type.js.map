@@ -1,0 +1,1 @@
+{"version":3,"file":"utils.type.js","sourceRoot":"","sources":["../../../src/utils/types/utils.type.ts"],"names":[],"mappings":"","sourcesContent":["export type TpLiteralUnion<T extends U, U = string> =\n  | T\n  | (U & Record<never, never>);\n\nexport type TpCssClassMap = { [className: string]: boolean };\n"]}

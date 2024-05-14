@@ -1,0 +1,1 @@
+{"version":3,"file":"theme.type.js","sourceRoot":"","sources":["../../../src/utils/types/theme.type.ts"],"names":[],"mappings":"","sourcesContent":["import type {\n  TpSchemeCSSClasses,\n  TpThemeCSSClasses,\n} from '../enums/theme.enum';\n\nexport type TpThemesCSSClasses = `${TpThemeCSSClasses}`;\nexport type TpSchemesCSSClasses = `${TpSchemeCSSClasses}`;\n"]}

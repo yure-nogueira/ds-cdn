@@ -1,0 +1,1 @@
+{"version":3,"file":"spacing.type.js","sourceRoot":"","sources":["../../../src/utils/types/spacing.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpSpacing } from '../enums/spacing.enum';\n\nexport type TpSpacings = `${TpSpacing}`;\n"]}

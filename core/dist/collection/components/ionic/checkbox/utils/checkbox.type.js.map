@@ -1,0 +1,1 @@
+{"version":3,"file":"checkbox.type.js","sourceRoot":"","sources":["../../../../../src/components/ionic/checkbox/utils/checkbox.type.ts"],"names":[],"mappings":"","sourcesContent":["import type { TpColor } from '../../../../utils/types/color.type';\n\nexport type TpIonCheckbox = {\n  color: `${TpColor}`;\n};\n"]}

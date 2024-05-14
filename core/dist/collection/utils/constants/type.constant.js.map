@@ -1,0 +1,1 @@
+{"version":3,"file":"type.constant.js","sourceRoot":"","sources":["../../../src/utils/constants/type.constant.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,MAAM,EAAE,MAAM,oBAAoB,CAAC;AAE5C,MAAM,CAAC,MAAM,OAAO,GAAG,MAAM,CAAC,MAAM,CAAC,MAAM,CAAC,CAAC","sourcesContent":["import { TpType } from '../enums/type.enum';\n\nexport const TP_TYPE = Object.values(TpType);\n"]}

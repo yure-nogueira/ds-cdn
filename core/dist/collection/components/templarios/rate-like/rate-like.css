@@ -1,0 +1,41 @@
+.tp-rate-like__container {
+  display: flex;
+  align-items: center;
+}
+.tp-rate-like__button {
+  width: 24px;
+  height: 24px;
+  color: var(--tp-color-neutral-10);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.tp-rate-like__button:first-child {
+  margin-right: 16px;
+}
+.tp-rate-like__button--disabled {
+  pointer-events: none;
+}
+.tp-rate-like__button--disabled .tp-rate-like__icon {
+  color: var(--tp-color-neutral-4);
+}
+.tp-rate-like__button--like .tp-rate-like__icon {
+  color: var(--tp-color-success);
+}
+.tp-rate-like__button--dislike .tp-rate-like__icon {
+  color: var(--tp-color-warning);
+}
+.tp-rate-like__icon {
+  width: 24px;
+  height: 24px;
+}
+.tp-rate-like__skeleton {
+  --background-rgb: var(--tp-color-neutral-10-rgb);
+  --border-radius: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+}
+.tp-rate-like__skeleton:not(:last-child) {
+  margin-right: 16px;
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"alert.type.js","sourceRoot":"","sources":["../../../../../src/components/templarios/alert/utils/alert.type.ts"],"names":[],"mappings":"","sourcesContent":["export type TpAlertType = {\n  icon: string;\n};\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"file":"loader.enum.js","sourceRoot":"","sources":["../../../../../src/components/templarios/loader/utils/loader.enum.ts"],"names":[],"mappings":"AAAA,MAAM,CAAN,IAAY,YAEX;AAFD,WAAY,YAAY;IACtB,uCAAuB,CAAA;AACzB,CAAC,EAFW,YAAY,KAAZ,YAAY,QAEvB","sourcesContent":["export enum TpLoaderName {\r\n  SECONDARY = 'secondary',\r\n}\r\n"]}

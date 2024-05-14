@@ -1,0 +1,26 @@
+{
+  "entries": [
+    "components/templarios/alert/alert.js",
+    "components/templarios/button-cluster/button-cluster.js",
+    "components/templarios/chart-bar/chart-bar.js",
+    "components/templarios/chart-radial/chart-radial.js",
+    "components/templarios/comparison-chart-bar/comparison-chart-bar.js",
+    "components/templarios/examples/dialog/dialog-example.js",
+    "components/templarios/examples/example/example.js",
+    "components/templarios/examples/modal/modal-example.js",
+    "components/templarios/examples/sheet/sheet-example.js",
+    "components/templarios/horizontal-chart-bar/horizontal-chart-bar.js",
+    "components/templarios/input-container/input-container.js",
+    "components/templarios/loader/loader.js",
+    "components/templarios/rate-like/rate-like.js",
+    "components/templarios/segment-container/segment-container.js",
+    "components/templarios/tooltip/tooltip.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.9.0",
+    "typescriptVersion": "5.2.2"
+  },
+  "collections": [],
+  "bundles": []
+}
